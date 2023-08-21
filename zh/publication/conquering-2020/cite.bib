@@ -1,0 +1,17 @@
+@inproceedings{10.1145/3377811.3380346,
+author = {Shi, Qingkai and Wu, Rongxin and Fan, Gang and Zhang, Charles},
+title = {Conquering the Extensional Scalability Problem for Value-Flow Analysis Frameworks},
+year = {2020},
+isbn = {9781450371216},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3377811.3380346},
+doi = {10.1145/3377811.3380346},
+abstract = {Modern static analyzers often need to simultaneously check a few dozen or even hundreds of value-flow properties, causing serious scalability issues when high precision is required. A major factor to this deficiency, as we observe, is that the core static analysis engine is oblivious of the mutual synergy among the properties being checked, thus inevitably losing many optimization opportunities. Our work is to leverage the inter-property awareness and to capture redundancies and inconsistencies when many properties are considered at the same time. We have evaluated our approach by checking twenty value-flow properties in standard benchmark programs and ten real-world software systems. The results demonstrate that our approach is more than 8\texttimes{} faster than existing ones but consumes only 1/7 of the memory. Such substantial improvement in analysis efficiency is not achieved by sacrificing the effectiveness: at the time of writing, thirty-nine bugs found by our approach have been fixed by developers and four of them have been assigned CVE IDs due to their security impact.},
+booktitle = {Proceedings of the ACM/IEEE 42nd International Conference on Software Engineering},
+pages = {812–823},
+numpages = {12},
+keywords = {value-flow analysis, static bug finding, demand-driven analysis, compositional program analysis},
+location = {Seoul, South Korea},
+series = {ICSE '20}
+}
