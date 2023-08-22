@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shing-Chi Cheung | 系统与软件安全实验室</title><link>https://s-cube-xmu.github.io/zh/author/shing-chi-cheung/</link><atom:link href="https://s-cube-xmu.github.io/zh/author/shing-chi-cheung/index.xml" rel="self" type="application/rss+xml"/><description>Shing-Chi Cheung</description><generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0000</lastBuildDate><image><url>https://s-cube-xmu.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url><title>Shing-Chi Cheung</title><link>https://s-cube-xmu.github.io/zh/author/shing-chi-cheung/</link></image><item><title>Exploring and Exploiting the Correlations between Bug-Inducing and Bug-Fixing Commits</title><link>https://s-cube-xmu.github.io/zh/publication/exploring-and-exploiting-2019/</link><pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/zh/publication/exploring-and-exploiting-2019/</guid><description>&lt;!--
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shing-Chi Cheung | 系统与软件安全实验室</title><link>https://s-cube-xmu.github.io/zh/author/shing-chi-cheung/</link><atom:link href="https://s-cube-xmu.github.io/zh/author/shing-chi-cheung/index.xml" rel="self" type="application/rss+xml"/><description>Shing-Chi Cheung</description><generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Fri, 01 Jul 2022 00:00:00 +0000</lastBuildDate><image><url>https://s-cube-xmu.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url><title>Shing-Chi Cheung</title><link>https://s-cube-xmu.github.io/zh/author/shing-chi-cheung/</link></image><item><title>Will Dependency Conflicts Affect My Program's Semantics?</title><link>https://s-cube-xmu.github.io/zh/publication/will-dependency-conflicts-affect-my-programs-semantics-2021/</link><pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/zh/publication/will-dependency-conflicts-affect-my-programs-semantics-2021/</guid><description>&lt;!--
+&lt;div class="alert alert-note">
+&lt;div>
+Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+&lt;/div>
+&lt;/div>
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Automatic Detection and Update Suggestion for Outdated API Names in Documentation</title><link>https://s-cube-xmu.github.io/zh/publication/automatic-detection-and-update-suggestion-for-outdated-api-names-in-documentation-2019/</link><pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/zh/publication/automatic-detection-and-update-suggestion-for-outdated-api-names-in-documentation-2019/</guid><description>&lt;!--
+&lt;div class="alert alert-note">
+&lt;div>
+Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+&lt;/div>
+&lt;/div>
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Exploring and Exploiting the Correlations between Bug-Inducing and Bug-Fixing Commits</title><link>https://s-cube-xmu.github.io/zh/publication/exploring-and-exploiting-2019/</link><pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/zh/publication/exploring-and-exploiting-2019/</guid><description>&lt;!--
 &lt;div class="alert alert-note">
 &lt;div>
 Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -11,6 +23,18 @@ Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitor
 &lt;/div>
 &lt;/div>
 Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Exposing Library API Misuses Via Mutation Analysis</title><link>https://s-cube-xmu.github.io/zh/publication/exposing-library-2019/</link><pubDate>Sat, 25 May 2019 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/zh/publication/exposing-library-2019/</guid><description>&lt;!--
+&lt;div class="alert alert-note">
+&lt;div>
+Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+&lt;/div>
+&lt;/div>
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>How Well Do Change Sequences Predict Defects? Sequence Learning from Software Changes</title><link>https://s-cube-xmu.github.io/zh/publication/how-well-do-change-sequences-predict-defects-sequence-learning-from-software-changes-2020/</link><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/zh/publication/how-well-do-change-sequences-predict-defects-sequence-learning-from-software-changes-2020/</guid><description>&lt;!--
+&lt;div class="alert alert-note">
+&lt;div>
+Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+&lt;/div>
+&lt;/div>
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>ChangeLocator: Locate Crash-Inducing Changes Based on Crash Reports</title><link>https://s-cube-xmu.github.io/zh/publication/changelocator-2018/</link><pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/zh/publication/changelocator-2018/</guid><description>&lt;!--
 &lt;div class="alert alert-note">
 &lt;div>
 Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
