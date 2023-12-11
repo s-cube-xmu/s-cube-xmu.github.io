@@ -4,7 +4,7 @@
 &lt;li>&lt;strong>Upload&lt;/strong> an existing slide deck to &lt;code>static/&lt;/code> and link using &lt;code>url_slides&lt;/code> parameter in the front matter of the talk file&lt;/li>
 &lt;li>&lt;strong>Embed&lt;/strong> your slides (e.g. Google Slides) or presentation video on this page using &lt;a href="https://wowchemy.com/docs/writing-markdown-latex/" target="_blank" rel="noopener">shortcodes&lt;/a>.&lt;/li>
 &lt;/ul>
-&lt;p>Further event details, including page elements such as image galleries, can be added to the body of this page.&lt;/p></description></item><item><title>Our third-party library related bug detection work has been accepted by ICSE 2024</title><link>https://s-cube-xmu.github.io/zh/post/libalchemy_icse24/</link><pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/zh/post/libalchemy_icse24/</guid><description>&lt;p>Our database logical bugs detection work has been accepted by &lt;a href="https://www.usenix.org/conference/atc23/presentation/hao" target="_blank" rel="noopener">ATC 2023&lt;/a>.&lt;/p>
+&lt;p>Further event details, including page elements such as image galleries, can be added to the body of this page.&lt;/p></description></item><item><title>Our third-party library related bug detection work has been accepted by ICSE 2024</title><link>https://s-cube-xmu.github.io/zh/post/libalchemy_icse24/</link><pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/zh/post/libalchemy_icse24/</guid><description>&lt;p>Our database logical bugs detection work has been accepted by ICSE 2024.&lt;/p>
 &lt;ul class="cta-group">
 &lt;li>
 &lt;a href="https://s-cube-xmu.github.io/publication/" class="btn btn-primary px-3 py-3">Details of publications →&lt;/a>
