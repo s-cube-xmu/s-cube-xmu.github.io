@@ -1,6 +1,804 @@
-<!doctype html><html lang=zh-Hans><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=generator content="Wowchemy 5.7.0 for Hugo"><link rel=stylesheet href=/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css media=print onload='this.media="all"'><link rel=stylesheet href=/css/wowchemy.312fa478a18a798c9270bab324760a16.css><link rel=stylesheet href=/css/libs/chroma/github-light.min.css title=hl-light media=print onload='this.media="all"'><link rel=stylesheet href=/css/libs/chroma/dracula.min.css title=hl-dark media=print onload='this.media="all"' disabled><meta name=description content><link rel=alternate hreflang=en href=https://s-cube-xmu.github.io/author/yixing-luo/><link rel=alternate hreflang=zh-hans href=https://s-cube-xmu.github.io/zh/author/yixing-luo/><link rel=canonical href=https://s-cube-xmu.github.io/zh/author/yixing-luo/><link rel=manifest href=/zh/manifest.webmanifest><link rel=icon type=image/png href=/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_32x32_fill_lanczos_center_3.png><link rel=apple-touch-icon type=image/png href=/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_180x180_fill_lanczos_center_3.png><meta name=theme-color content="#1565c0"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png"><meta property="og:site_name" content="系统与软件安全实验室"><meta property="og:url" content="https://s-cube-xmu.github.io/zh/author/yixing-luo/"><meta property="og:title" content="Yixing Luo | 系统与软件安全实验室"><meta property="og:description" content><meta property="og:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="zh-Hans"><meta property="og:updated_time" content="2021-11-15T00:00:00+00:00"><link rel=alternate href=/zh/author/yixing-luo/index.xml type=application/rss+xml title=系统与软件安全实验室><title>Yixing Luo | 系统与软件安全实验室</title></head><body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper><script src=/js/wowchemy-init.min.fe8634e7d00f14d07fb33caf14cc8e55.js></script><div class="page-header header--fixed"><header><nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main><div class=container-xl><div class="d-none d-lg-inline-flex"><a class=navbar-brand href=/zh/>系统与软件安全实验室</a></div><button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar-content aria-expanded=false aria-label=切换导航>
-<span><i class="fas fa-bars"></i></span></button><div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none"><a class=navbar-brand href=/zh/>系统与软件安全实验室</a></div><div class="navbar-collapse main-menu-item collapse justify-content-end" id=navbar-content><ul class="navbar-nav d-md-inline-flex"><li class=nav-item><a class=nav-link href=/zh/post><span>新闻</span></a></li><li class=nav-item><a class=nav-link href=/zh/people><span>成员</span></a></li><li class=nav-item><a class=nav-link href=/zh/publication><span>科研成果</span></a></li><li class=nav-item><a class=nav-link href=/zh/contact><span>联系我们</span></a></li></ul></div><ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2"><li class="nav-item dropdown i18n-dropdown"><a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label=语言><i class="fas fa-globe mr-1" aria-hidden=true></i></a><div class=dropdown-menu><div class="dropdown-item dropdown-item-active"><span>中文 (简体)</span></div><a class=dropdown-item href=https://s-cube-xmu.github.io/author/yixing-luo/><span>English</span></a></div></li></ul></div></nav></header></div><div class=page-body><div class="universal-wrapper pt-3"><h1>Yixing Luo</h1></div><section id=profile-page class=pt-5><div class=container><div class="article-widget content-widget-hr"><h3>最新</h3><ul><li><a href=/zh/publication/targetingrequirementsviolations-2021/>Targeting Requirements Violations of Autonomous Driving Systems by Dynamic Evolutionary Search</a></li></ul></div></div></section></div><div class=page-footer><div class=container><footer class=site-footer><p class="powered-by copyright-license-text">Copyright © 2019 - 2023 System and Software Security Lab @ XMU</p><p class=powered-by>由<a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a>支持发布——免费<a href=https://github.com/wowchemy/wowchemy-hugo-themes target=_blank rel=noopener>开源</a>网站，为创作者赋能。</p></footer></div></div><script src=/js/vendor-bundle.min.32ee83730ed883becad04bc5170512cc.js></script>
-<script id=page-data type=application/json>{"use_headroom":true}</script><script src=/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js type=module></script>
-<script src=/zh/js/wowchemy.min.0da3fd7a93c07d11d5561e9713f84757.js></script><div id=modal class="modal fade" role=dialog><div class=modal-dialog><div class=modal-content><div class=modal-header><h5 class=modal-title>引用</h5><button type=button class=close data-dismiss=modal aria-label=Close>
-<span aria-hidden=true>&#215;</span></button></div><div class=modal-body><pre><code></code></pre></div><div class=modal-footer><a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank><i class="fas fa-copy"></i> 复制</a>
-<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank><i class="fas fa-download"></i> 下载</a><div id=modal-error></div></div></div></div></div><script src=/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js type=module></script></body></html>
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: 2023年12月19日 --><html lang="zh-Hans" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.312fa478a18a798c9270bab324760a16.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<meta name="description" content="" />
+
+
+
+  <link rel="alternate" hreflang="en" href="https://s-cube-xmu.github.io/author/yixing-luo/" />
+
+<link rel="alternate" hreflang="zh-Hans" href="https://s-cube-xmu.github.io/zh/author/yixing-luo/" />
+<link rel="canonical" href="https://s-cube-xmu.github.io/zh/author/yixing-luo/" />
+
+
+
+  <link rel="manifest" href="/zh/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="系统与软件安全实验室" />
+<meta property="og:url" content="https://s-cube-xmu.github.io/zh/author/yixing-luo/" />
+<meta property="og:title" content="Yixing Luo | 系统与软件安全实验室" />
+<meta property="og:description" content="" /><meta property="og:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
+
+  
+    <meta property="og:updated_time" content="2021-11-15T00:00:00&#43;00:00" />
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    <link rel="alternate" href="/zh/author/yixing-luo/index.xml" type="application/rss+xml" title="系统与软件安全实验室" />
+  
+
+  
+
+
+  
+  <title>Yixing Luo | 系统与软件安全实验室</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   "  >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.fe8634e7d00f14d07fb33caf14cc8e55.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/zh/">系统与软件安全实验室</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="切换导航">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/zh/">系统与软件安全实验室</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/post"><span>新闻</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/people"><span>成员</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/publication"><span>科研成果</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/contact"><span>联系我们</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        <li class="nav-item dropdown i18n-dropdown">
+          <a href="#" class="nav-link " data-toggle="dropdown"
+             aria-haspopup="true" aria-label="语言">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item dropdown-item-active">
+              <span>中文 (简体)</span>
+            </div>
+            
+            <a class="dropdown-item" href="https://s-cube-xmu.github.io/author/yixing-luo/">
+              <span>English</span>
+            </a>
+            
+          </div>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+<div class="universal-wrapper pt-3">
+  <h1>Yixing Luo</h1>
+</div>
+
+
+<section id="profile-page" class="pt-5">
+  <div class="container">
+    
+    
+    
+
+    
+    
+    
+    <div class="article-widget content-widget-hr">
+      <h3>最新</h3>
+      <ul>
+        
+        <li>
+          <a href="/zh/publication/targetingrequirementsviolations-2021/">Targeting Requirements Violations of Autonomous Driving Systems by Dynamic Evolutionary Search</a>
+        </li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</section>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <p class="powered-by copyright-license-text">
+    Copyright © 2019 - 2023 System and Software Security Lab @ XMU
+  </p>
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      由<a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>支持发布——免费<a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">开源</a>网站，为创作者赋能。
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.32ee83730ed883becad04bc5170512cc.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/zh/js/wowchemy.min.0da3fd7a93c07d11d5561e9713f84757.js"></script>
+
+
+
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">引用</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> 复制
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> 下载
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

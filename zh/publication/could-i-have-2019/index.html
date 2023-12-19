@@ -1,10 +1,1239 @@
-<!doctype html><html lang=zh-Hans><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=generator content="Wowchemy 5.7.0 for Hugo"><link rel=stylesheet href=/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css media=print onload='this.media="all"'><link rel=stylesheet href=/css/wowchemy.312fa478a18a798c9270bab324760a16.css><link rel=stylesheet href=/css/libs/chroma/github-light.min.css title=hl-light media=print onload='this.media="all"'><link rel=stylesheet href=/css/libs/chroma/dracula.min.css title=hl-dark media=print onload='this.media="all"' disabled><meta name=description content="Intensive use of libraries in Java projects brings potential risk of dependency conflicts, which occur when a project directly or indirectly depends on multiple versions of the same library or class. When this happens, JVM loads one version and shadows the others. Runtime exceptions can occur when methods in the shadowed versions are referenced. Although project management tools such as Maven are able to give warnings of potential dependency conflicts when a project is built, developers often ask for crashing stack traces before examining these warnings. It motivates us to develop Riddle, an automated approach that generates tests and collects crashing stack traces for projects subject to risk of dependency conflicts. Riddle, built on top of Asm and Evosuite, combines condition mutation, search strategies and condition restoration. We applied Riddle on 19 real-world Java projects with duplicate libraries or classes. We reported 20 identified dependency conflicts including their induced crashing stack traces and the details of generated tests. Among them, 15 conflicts were confirmed by developers as real issues, and 10 were readily fixed. The evaluation results demonstrate the effectiveness and usefulness of Riddle."><link rel=alternate hreflang=en href=https://s-cube-xmu.github.io/publication/could-i-have-2019/><link rel=alternate hreflang=zh-hans href=https://s-cube-xmu.github.io/zh/publication/could-i-have-2019/><link rel=canonical href=https://s-cube-xmu.github.io/zh/publication/could-i-have-2019/><link rel=manifest href=/zh/manifest.webmanifest><link rel=icon type=image/png href=/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_32x32_fill_lanczos_center_3.png><link rel=apple-touch-icon type=image/png href=/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_180x180_fill_lanczos_center_3.png><meta name=theme-color content="#1565c0"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png"><meta property="og:site_name" content="系统与软件安全实验室"><meta property="og:url" content="https://s-cube-xmu.github.io/zh/publication/could-i-have-2019/"><meta property="og:title" content="Could I Have a Stack Trace to Examine the Dependency Conflict Issue? | 系统与软件安全实验室"><meta property="og:description" content="Intensive use of libraries in Java projects brings potential risk of dependency conflicts, which occur when a project directly or indirectly depends on multiple versions of the same library or class. When this happens, JVM loads one version and shadows the others. Runtime exceptions can occur when methods in the shadowed versions are referenced. Although project management tools such as Maven are able to give warnings of potential dependency conflicts when a project is built, developers often ask for crashing stack traces before examining these warnings. It motivates us to develop Riddle, an automated approach that generates tests and collects crashing stack traces for projects subject to risk of dependency conflicts. Riddle, built on top of Asm and Evosuite, combines condition mutation, search strategies and condition restoration. We applied Riddle on 19 real-world Java projects with duplicate libraries or classes. We reported 20 identified dependency conflicts including their induced crashing stack traces and the details of generated tests. Among them, 15 conflicts were confirmed by developers as real issues, and 10 were readily fixed. The evaluation results demonstrate the effectiveness and usefulness of Riddle."><meta property="og:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="zh-Hans"><meta property="article:published_time" content="2019-05-25T00:00:00+00:00"><meta property="article:modified_time" content="2019-05-25T00:00:00+00:00"><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://s-cube-xmu.github.io/zh/publication/could-i-have-2019/"},"headline":"Could I Have a Stack Trace to Examine the Dependency Conflict Issue?","datePublished":"2019-05-25T00:00:00Z","dateModified":"2019-05-25T00:00:00Z","author":{"@type":"Person","name":"Ying Wang"},"publisher":{"@type":"Organization","name":"系统与软件安全实验室","logo":{"@type":"ImageObject","url":"https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_192x192_fill_lanczos_center_3.png"}},"description":"Intensive use of libraries in Java projects brings potential risk of dependency conflicts, which occur when a project directly or indirectly depends on multiple versions of the same library or class. When this happens, JVM loads one version and shadows the others. Runtime exceptions can occur when methods in the shadowed versions are referenced. Although project management tools such as Maven are able to give warnings of potential dependency conflicts when a project is built, developers often ask for crashing stack traces before examining these warnings. It motivates us to develop Riddle, an automated approach that generates tests and collects crashing stack traces for projects subject to risk of dependency conflicts. Riddle, built on top of Asm and Evosuite, combines condition mutation, search strategies and condition restoration. We applied Riddle on 19 real-world Java projects with duplicate libraries or classes. We reported 20 identified dependency conflicts including their induced crashing stack traces and the details of generated tests. Among them, 15 conflicts were confirmed by developers as real issues, and 10 were readily fixed. The evaluation results demonstrate the effectiveness and usefulness of Riddle."}</script><title>Could I Have a Stack Trace to Examine the Dependency Conflict Issue? | 系统与软件安全实验室</title></head><body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=59149aa4d6b640f9fe445ac61acdfb34><script src=/js/wowchemy-init.min.fe8634e7d00f14d07fb33caf14cc8e55.js></script><div class="page-header header--fixed"><header><nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main><div class=container-xl><div class="d-none d-lg-inline-flex"><a class=navbar-brand href=/zh/>系统与软件安全实验室</a></div><button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar-content aria-expanded=false aria-label=切换导航>
-<span><i class="fas fa-bars"></i></span></button><div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none"><a class=navbar-brand href=/zh/>系统与软件安全实验室</a></div><div class="navbar-collapse main-menu-item collapse justify-content-end" id=navbar-content><ul class="navbar-nav d-md-inline-flex"><li class=nav-item><a class=nav-link href=/zh/post><span>新闻</span></a></li><li class=nav-item><a class=nav-link href=/zh/people><span>成员</span></a></li><li class=nav-item><a class=nav-link href=/zh/publication><span>科研成果</span></a></li><li class=nav-item><a class=nav-link href=/zh/contact><span>联系我们</span></a></li></ul></div><ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2"><li class="nav-item dropdown i18n-dropdown"><a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label=语言><i class="fas fa-globe mr-1" aria-hidden=true></i></a><div class=dropdown-menu><div class="dropdown-item dropdown-item-active"><span>中文 (简体)</span></div><a class=dropdown-item href=https://s-cube-xmu.github.io/publication/could-i-have-2019/><span>English</span></a></div></li></ul></div></nav></header></div><div class=page-body><div class=pub><div class="article-container pt-3"><h1>Could I Have a Stack Trace to Examine the Dependency Conflict Issue?</h1><div class=article-metadata><div><span><a href=/zh/author/ying-wang/>Ying Wang</a></span>, <span><a href=/zh/author/ming-wen/>Ming Wen</a></span>, <span><a href=/zh/author/rongxin-wu/>Rongxin Wu</a></span>, <span><a href=/zh/author/zhenwei-liu/>Zhenwei Liu</a></span>, <span><a href=/zh/author/shin-hwei-tan/>Shin Hwei Tan</a></span>, <span><a href=/zh/author/zhiliang-zhu/>Zhiliang Zhu</a></span>, <span><a href=/zh/author/hai-yu/>Hai Yu</a></span>, <span><a href=/zh/author/shing-chi-cheung/>Shing-Chi Cheung</a></span></div><span class=article-date>五月, 2019</span></div><div class="btn-links mb-3"><a class="btn btn-outline-primary btn-page-header" href=/uploads/Could_I_Have.pdf target=_blank rel=noopener>PDF</a>
-<a href=# class="btn btn-outline-primary btn-page-header js-cite-modal" data-filename=/zh/publication/could-i-have-2019/cite.bib>引用</a>
-<a class="btn btn-outline-primary btn-page-header" href=https://ieeexplore.ieee.org/abstract/document/8812128 target=_blank rel=noopener>Paper Link</a></div></div><div class=article-container><h3>摘要</h3><p class=pub-abstract>Intensive use of libraries in Java projects brings potential risk of dependency conflicts, which occur when a project directly or indirectly depends on multiple versions of the same library or class. When this happens, JVM loads one version and shadows the others. Runtime exceptions can occur when methods in the shadowed versions are referenced. Although project management tools such as Maven are able to give warnings of potential dependency conflicts when a project is built, developers often ask for crashing stack traces before examining these warnings. It motivates us to develop Riddle, an automated approach that generates tests and collects crashing stack traces for projects subject to risk of dependency conflicts. Riddle, built on top of Asm and Evosuite, combines condition mutation, search strategies and condition restoration. We applied Riddle on 19 real-world Java projects with duplicate libraries or classes. We reported 20 identified dependency conflicts including their induced crashing stack traces and the details of generated tests. Among them, 15 conflicts were confirmed by developers as real issues, and 10 were readily fixed. The evaluation results demonstrate the effectiveness and usefulness of Riddle.</p><div class=row><div class=col-md-1></div><div class=col-md-10><div class=row><div class="col-12 col-md-3 pub-row-heading">类型</div><div class="col-12 col-md-9"><a href=/zh/publication/#1>会议文章</a></div></div></div><div class=col-md-1></div></div><div class="d-md-none space-below"></div><div class=row><div class=col-md-1></div><div class=col-md-10><div class=row><div class="col-12 col-md-3 pub-row-heading">出版物</div><div class="col-12 col-md-9">In <em>International Conference on Software Engineering</em></div></div></div><div class=col-md-1></div></div><div class="d-md-none space-below"></div><div class=space-below></div><div class=article-style></div><div class=article-tags><a class="badge badge-light" href=/zh/tag/test-generation/>Test generation</a>
-<a class="badge badge-light" href=/zh/tag/mutation/>Mutation</a>
-<a class="badge badge-light" href=/zh/tag/third-party-library/>Third-party library</a></div><div class=share-box><ul class=share><li><a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fcould-i-have-2019%2F&amp;text=Could+I+Have+a+Stack+Trace+to+Examine+the+Dependency+Conflict+Issue%3F" target=_blank rel=noopener class=share-btn-twitter aria-label=twitter><i class="fab fa-twitter"></i></a></li><li><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fcould-i-have-2019%2F&amp;t=Could+I+Have+a+Stack+Trace+to+Examine+the+Dependency+Conflict+Issue%3F" target=_blank rel=noopener class=share-btn-facebook aria-label=facebook><i class="fab fa-facebook"></i></a></li><li><a href="mailto:?subject=Could%20I%20Have%20a%20Stack%20Trace%20to%20Examine%20the%20Dependency%20Conflict%20Issue%3F&amp;body=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fcould-i-have-2019%2F" target=_blank rel=noopener class=share-btn-email aria-label=envelope><i class="fas fa-envelope"></i></a></li><li><a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fcould-i-have-2019%2F&amp;title=Could+I+Have+a+Stack+Trace+to+Examine+the+Dependency+Conflict+Issue%3F" target=_blank rel=noopener class=share-btn-linkedin aria-label=linkedin-in><i class="fab fa-linkedin-in"></i></a></li><li><a href="whatsapp://send?text=Could+I+Have+a+Stack+Trace+to+Examine+the+Dependency+Conflict+Issue%3F%20https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fcould-i-have-2019%2F" target=_blank rel=noopener class=share-btn-whatsapp aria-label=whatsapp><i class="fab fa-whatsapp"></i></a></li><li><a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fcould-i-have-2019%2F&amp;title=Could+I+Have+a+Stack+Trace+to+Examine+the+Dependency+Conflict+Issue%3F" target=_blank rel=noopener class=share-btn-weibo aria-label=weibo><i class="fab fa-weibo"></i></a></li></ul></div></div></div></div><div class=page-footer><div class=container><footer class=site-footer><p class="powered-by copyright-license-text">Copyright © 2019 - 2023 System and Software Security Lab @ XMU</p><p class=powered-by>由<a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a>支持发布——免费<a href=https://github.com/wowchemy/wowchemy-hugo-themes target=_blank rel=noopener>开源</a>网站，为创作者赋能。</p></footer></div></div><script src=/js/vendor-bundle.min.32ee83730ed883becad04bc5170512cc.js></script>
-<script id=page-data type=application/json>{"use_headroom":true}</script><script src=/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js type=module></script>
-<script src=/zh/js/wowchemy.min.0da3fd7a93c07d11d5561e9713f84757.js></script><div id=modal class="modal fade" role=dialog><div class=modal-dialog><div class=modal-content><div class=modal-header><h5 class=modal-title>引用</h5><button type=button class=close data-dismiss=modal aria-label=Close>
-<span aria-hidden=true>&#215;</span></button></div><div class=modal-body><pre><code></code></pre></div><div class=modal-footer><a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank><i class="fas fa-copy"></i> 复制</a>
-<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank><i class="fas fa-download"></i> 下载</a><div id=modal-error></div></div></div></div></div><script src=/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js type=module></script></body></html>
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: 2023年12月19日 --><html lang="zh-Hans" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.312fa478a18a798c9270bab324760a16.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<meta name="description" content="Intensive use of libraries in Java projects brings potential risk of dependency conflicts, which occur when a project directly or indirectly depends on multiple versions of the same library or class. When this happens, JVM loads one version and shadows the others. Runtime exceptions can occur when methods in the shadowed versions are referenced. Although project management tools such as Maven are able to give warnings of potential dependency conflicts when a project is built, developers often ask for crashing stack traces before examining these warnings. It motivates us to develop Riddle, an automated approach that generates tests and collects crashing stack traces for projects subject to risk of dependency conflicts. Riddle, built on top of Asm and Evosuite, combines condition mutation, search strategies and condition restoration. We applied Riddle on 19 real-world Java projects with duplicate libraries or classes. We reported 20 identified dependency conflicts including their induced crashing stack traces and the details of generated tests. Among them, 15 conflicts were confirmed by developers as real issues, and 10 were readily fixed. The evaluation results demonstrate the effectiveness and usefulness of Riddle." />
+
+
+
+  <link rel="alternate" hreflang="en" href="https://s-cube-xmu.github.io/publication/could-i-have-2019/" />
+
+<link rel="alternate" hreflang="zh-Hans" href="https://s-cube-xmu.github.io/zh/publication/could-i-have-2019/" />
+<link rel="canonical" href="https://s-cube-xmu.github.io/zh/publication/could-i-have-2019/" />
+
+
+
+  <link rel="manifest" href="/zh/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="系统与软件安全实验室" />
+<meta property="og:url" content="https://s-cube-xmu.github.io/zh/publication/could-i-have-2019/" />
+<meta property="og:title" content="Could I Have a Stack Trace to Examine the Dependency Conflict Issue? | 系统与软件安全实验室" />
+<meta property="og:description" content="Intensive use of libraries in Java projects brings potential risk of dependency conflicts, which occur when a project directly or indirectly depends on multiple versions of the same library or class. When this happens, JVM loads one version and shadows the others. Runtime exceptions can occur when methods in the shadowed versions are referenced. Although project management tools such as Maven are able to give warnings of potential dependency conflicts when a project is built, developers often ask for crashing stack traces before examining these warnings. It motivates us to develop Riddle, an automated approach that generates tests and collects crashing stack traces for projects subject to risk of dependency conflicts. Riddle, built on top of Asm and Evosuite, combines condition mutation, search strategies and condition restoration. We applied Riddle on 19 real-world Java projects with duplicate libraries or classes. We reported 20 identified dependency conflicts including their induced crashing stack traces and the details of generated tests. Among them, 15 conflicts were confirmed by developers as real issues, and 10 were readily fixed. The evaluation results demonstrate the effectiveness and usefulness of Riddle." /><meta property="og:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2019-05-25T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2019-05-25T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://s-cube-xmu.github.io/zh/publication/could-i-have-2019/"
+  },
+  "headline": "Could I Have a Stack Trace to Examine the Dependency Conflict Issue?",
+  
+  "datePublished": "2019-05-25T00:00:00Z",
+  "dateModified": "2019-05-25T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Ying Wang"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "系统与软件安全实验室",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Intensive use of libraries in Java projects brings potential risk of dependency conflicts, which occur when a project directly or indirectly depends on multiple versions of the same library or class. When this happens, JVM loads one version and shadows the others. Runtime exceptions can occur when methods in the shadowed versions are referenced. Although project management tools such as Maven are able to give warnings of potential dependency conflicts when a project is built, developers often ask for crashing stack traces before examining these warnings. It motivates us to develop Riddle, an automated approach that generates tests and collects crashing stack traces for projects subject to risk of dependency conflicts. Riddle, built on top of Asm and Evosuite, combines condition mutation, search strategies and condition restoration. We applied Riddle on 19 real-world Java projects with duplicate libraries or classes. We reported 20 identified dependency conflicts including their induced crashing stack traces and the details of generated tests. Among them, 15 conflicts were confirmed by developers as real issues, and 10 were readily fixed. The evaluation results demonstrate the effectiveness and usefulness of Riddle."
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Could I Have a Stack Trace to Examine the Dependency Conflict Issue? | 系统与软件安全实验室</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="59149aa4d6b640f9fe445ac61acdfb34" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.fe8634e7d00f14d07fb33caf14cc8e55.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/zh/">系统与软件安全实验室</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="切换导航">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/zh/">系统与软件安全实验室</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/post"><span>新闻</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/people"><span>成员</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/publication"><span>科研成果</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/contact"><span>联系我们</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        <li class="nav-item dropdown i18n-dropdown">
+          <a href="#" class="nav-link " data-toggle="dropdown"
+             aria-haspopup="true" aria-label="语言">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item dropdown-item-active">
+              <span>中文 (简体)</span>
+            </div>
+            
+            <a class="dropdown-item" href="https://s-cube-xmu.github.io/publication/could-i-have-2019/">
+              <span>English</span>
+            </a>
+            
+          </div>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+
+
+
+
+
+<div class="pub">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Could I Have a Stack Trace to Examine the Dependency Conflict Issue?</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      <a href="/zh/author/ying-wang/">Ying Wang</a></span>, <span >
+      <a href="/zh/author/ming-wen/">Ming Wen</a></span>, <span >
+      <a href="/zh/author/rongxin-wu/">Rongxin Wu</a></span>, <span >
+      <a href="/zh/author/zhenwei-liu/">Zhenwei Liu</a></span>, <span >
+      <a href="/zh/author/shin-hwei-tan/">Shin Hwei Tan</a></span>, <span >
+      <a href="/zh/author/zhiliang-zhu/">Zhiliang Zhu</a></span>, <span >
+      <a href="/zh/author/hai-yu/">Hai Yu</a></span>, <span >
+      <a href="/zh/author/shing-chi-cheung/">Shing-Chi Cheung</a></span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    五月, 2019
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header" href="/uploads/Could_I_Have.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header js-cite-modal"
+        data-filename="/zh/publication/could-i-have-2019/cite.bib">
+  引用
+</a>
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header" href="https://ieeexplore.ieee.org/abstract/document/8812128" target="_blank" rel="noopener">
+    Paper Link</a>
+
+
+</div>
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    
+    <h3>摘要</h3>
+    <p class="pub-abstract">Intensive use of libraries in Java projects brings potential risk of dependency conflicts, which occur when a project directly or indirectly depends on multiple versions of the same library or class. When this happens, JVM loads one version and shadows the others. Runtime exceptions can occur when methods in the shadowed versions are referenced. Although project management tools such as Maven are able to give warnings of potential dependency conflicts when a project is built, developers often ask for crashing stack traces before examining these warnings. It motivates us to develop Riddle, an automated approach that generates tests and collects crashing stack traces for projects subject to risk of dependency conflicts. Riddle, built on top of Asm and Evosuite, combines condition mutation, search strategies and condition restoration. We applied Riddle on 19 real-world Java projects with duplicate libraries or classes. We reported 20 identified dependency conflicts including their induced crashing stack traces and the details of generated tests. Among them, 15 conflicts were confirmed by developers as real issues, and 10 were readily fixed. The evaluation results demonstrate the effectiveness and usefulness of Riddle.</p>
+    
+
+    
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">类型</div>
+          <div class="col-12 col-md-9">
+            <a href="/zh/publication/#1">
+              会议文章
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">出版物</div>
+          <div class="col-12 col-md-9">In <em>International Conference on Software Engineering</em></div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style"><!-- 
+
+
+<div class="alert alert-note">
+  <div>
+    Click the <em>Cite</em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  </div>
+</div>
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). -->
+</div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/zh/tag/test-generation/">Test generation</a>
+  
+  <a class="badge badge-light" href="/zh/tag/mutation/">Mutation</a>
+  
+  <a class="badge badge-light" href="/zh/tag/third-party-library/">Third-party library</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fcould-i-have-2019%2F&amp;text=Could&#43;I&#43;Have&#43;a&#43;Stack&#43;Trace&#43;to&#43;Examine&#43;the&#43;Dependency&#43;Conflict&#43;Issue%3F" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fcould-i-have-2019%2F&amp;t=Could&#43;I&#43;Have&#43;a&#43;Stack&#43;Trace&#43;to&#43;Examine&#43;the&#43;Dependency&#43;Conflict&#43;Issue%3F" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=Could%20I%20Have%20a%20Stack%20Trace%20to%20Examine%20the%20Dependency%20Conflict%20Issue%3F&amp;body=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fcould-i-have-2019%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fcould-i-have-2019%2F&amp;title=Could&#43;I&#43;Have&#43;a&#43;Stack&#43;Trace&#43;to&#43;Examine&#43;the&#43;Dependency&#43;Conflict&#43;Issue%3F" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Could&#43;I&#43;Have&#43;a&#43;Stack&#43;Trace&#43;to&#43;Examine&#43;the&#43;Dependency&#43;Conflict&#43;Issue%3F%20https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fcould-i-have-2019%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fcould-i-have-2019%2F&amp;title=Could&#43;I&#43;Have&#43;a&#43;Stack&#43;Trace&#43;to&#43;Examine&#43;the&#43;Dependency&#43;Conflict&#43;Issue%3F" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <p class="powered-by copyright-license-text">
+    Copyright © 2019 - 2023 System and Software Security Lab @ XMU
+  </p>
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      由<a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>支持发布——免费<a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">开源</a>网站，为创作者赋能。
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.32ee83730ed883becad04bc5170512cc.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/zh/js/wowchemy.min.0da3fd7a93c07d11d5561e9713f84757.js"></script>
+
+
+
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">引用</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> 复制
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> 下载
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

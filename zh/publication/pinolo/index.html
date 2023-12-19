@@ -1,9 +1,1230 @@
-<!doctype html><html lang=zh-Hans><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=generator content="Wowchemy 5.7.0 for Hugo"><link rel=stylesheet href=/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css media=print onload='this.media="all"'><link rel=stylesheet href=/css/wowchemy.312fa478a18a798c9270bab324760a16.css><link rel=stylesheet href=/css/libs/chroma/github-light.min.css title=hl-light media=print onload='this.media="all"'><link rel=stylesheet href=/css/libs/chroma/dracula.min.css title=hl-dark media=print onload='this.media="all"' disabled><meta name=description content="DBMSs (Database Management Systems) are essential in modern enterprise software. Thus, ensuring the correctness of DBMSs is critical for enterprise applications. Among various kinds of bugs, logical bugs, which make a DBMS return an incorrect result set for a given SQL query, are the most challenging for detection since they typically do not result in apparent manifestations (e.g., crashes) and are likely to go unnoticed by users. The key challenge of detecting logical bugs is the test oracle problem, i.e., how to automatically characterize the expected results for a given query. The state-of-theart approaches focus on generating the equivalent forms of queries via the customized rules, which rewrite a seed query to achieve the equivalent transformation. This dramatically limits the forms of SQL queries fed to the DBMS and thus leads to the under-reporting of many deeply-hidden logical bugs. In this paper, we propose a novel approach, PINOLO, to constructing a test oracle for logical bugs. Instead of generating the equivalent mutants of a seed query, our idea is to synthesize the queries that theoretically should return a superset or a subset of the result set of the seed query, forming the over-approximations or under-approximations of the seed query. A logical bug is detected if the result set returned by our synthesized query does not follow the expected approximation relation. We implemented our idea as a DBMS testing system and evaluated it on four widely-used DBMSs: MySQL, MariaDB, TiDB, and OceanBase. By the time of writing, PINOLO has found 41 unique logical bugs in these DBMSs, 39 of which have been confirmed by developers."><link rel=alternate hreflang=en href=https://s-cube-xmu.github.io/publication/pinolo/><link rel=alternate hreflang=zh-hans href=https://s-cube-xmu.github.io/zh/publication/pinolo/><link rel=canonical href=https://s-cube-xmu.github.io/zh/publication/pinolo/><link rel=manifest href=/zh/manifest.webmanifest><link rel=icon type=image/png href=/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_32x32_fill_lanczos_center_3.png><link rel=apple-touch-icon type=image/png href=/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_180x180_fill_lanczos_center_3.png><meta name=theme-color content="#1565c0"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png"><meta property="og:site_name" content="系统与软件安全实验室"><meta property="og:url" content="https://s-cube-xmu.github.io/zh/publication/pinolo/"><meta property="og:title" content="Pinolo: Detecting Logical Bugs in Database Management Systems with Approximate Query Synthesis | 系统与软件安全实验室"><meta property="og:description" content="DBMSs (Database Management Systems) are essential in modern enterprise software. Thus, ensuring the correctness of DBMSs is critical for enterprise applications. Among various kinds of bugs, logical bugs, which make a DBMS return an incorrect result set for a given SQL query, are the most challenging for detection since they typically do not result in apparent manifestations (e.g., crashes) and are likely to go unnoticed by users. The key challenge of detecting logical bugs is the test oracle problem, i.e., how to automatically characterize the expected results for a given query. The state-of-theart approaches focus on generating the equivalent forms of queries via the customized rules, which rewrite a seed query to achieve the equivalent transformation. This dramatically limits the forms of SQL queries fed to the DBMS and thus leads to the under-reporting of many deeply-hidden logical bugs. In this paper, we propose a novel approach, PINOLO, to constructing a test oracle for logical bugs. Instead of generating the equivalent mutants of a seed query, our idea is to synthesize the queries that theoretically should return a superset or a subset of the result set of the seed query, forming the over-approximations or under-approximations of the seed query. A logical bug is detected if the result set returned by our synthesized query does not follow the expected approximation relation. We implemented our idea as a DBMS testing system and evaluated it on four widely-used DBMSs: MySQL, MariaDB, TiDB, and OceanBase. By the time of writing, PINOLO has found 41 unique logical bugs in these DBMSs, 39 of which have been confirmed by developers."><meta property="og:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="zh-Hans"><meta property="article:published_time" content="2023-01-01T00:00:00+00:00"><meta property="article:modified_time" content="2023-07-10T00:00:00+00:00"><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://s-cube-xmu.github.io/zh/publication/pinolo/"},"headline":"Pinolo: Detecting Logical Bugs in Database Management Systems with Approximate Query Synthesis","datePublished":"2023-01-01T00:00:00Z","dateModified":"2023-07-10T00:00:00Z","author":{"@type":"Person","name":"Zongyin Hao"},"publisher":{"@type":"Organization","name":"系统与软件安全实验室","logo":{"@type":"ImageObject","url":"https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_192x192_fill_lanczos_center_3.png"}},"description":"DBMSs (Database Management Systems) are essential in modern enterprise software. Thus, ensuring the correctness of DBMSs is critical for enterprise applications. Among various kinds of bugs, logical bugs, which make a DBMS return an incorrect result set for a given SQL query, are the most challenging for detection since they typically do not result in apparent manifestations (e.g., crashes) and are likely to go unnoticed by users. The key challenge of detecting logical bugs is the test oracle problem, i.e., how to automatically characterize the expected results for a given query. The state-of-theart approaches focus on generating the equivalent forms of queries via the customized rules, which rewrite a seed query to achieve the equivalent transformation. This dramatically limits the forms of SQL queries fed to the DBMS and thus leads to the under-reporting of many deeply-hidden logical bugs. In this paper, we propose a novel approach, PINOLO, to constructing a test oracle for logical bugs. Instead of generating the equivalent mutants of a seed query, our idea is to synthesize the queries that theoretically should return a superset or a subset of the result set of the seed query, forming the over-approximations or under-approximations of the seed query. A logical bug is detected if the result set returned by our synthesized query does not follow the expected approximation relation. We implemented our idea as a DBMS testing system and evaluated it on four widely-used DBMSs: MySQL, MariaDB, TiDB, and OceanBase. By the time of writing, PINOLO has found 41 unique logical bugs in these DBMSs, 39 of which have been confirmed by developers."}</script><title>Pinolo: Detecting Logical Bugs in Database Management Systems with Approximate Query Synthesis | 系统与软件安全实验室</title></head><body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=89d5d46f70a2b9e63cafe6fbd9be0a7c><script src=/js/wowchemy-init.min.fe8634e7d00f14d07fb33caf14cc8e55.js></script><div class="page-header header--fixed"><header><nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main><div class=container-xl><div class="d-none d-lg-inline-flex"><a class=navbar-brand href=/zh/>系统与软件安全实验室</a></div><button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar-content aria-expanded=false aria-label=切换导航>
-<span><i class="fas fa-bars"></i></span></button><div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none"><a class=navbar-brand href=/zh/>系统与软件安全实验室</a></div><div class="navbar-collapse main-menu-item collapse justify-content-end" id=navbar-content><ul class="navbar-nav d-md-inline-flex"><li class=nav-item><a class=nav-link href=/zh/post><span>新闻</span></a></li><li class=nav-item><a class=nav-link href=/zh/people><span>成员</span></a></li><li class=nav-item><a class=nav-link href=/zh/publication><span>科研成果</span></a></li><li class=nav-item><a class=nav-link href=/zh/contact><span>联系我们</span></a></li></ul></div><ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2"><li class="nav-item dropdown i18n-dropdown"><a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label=语言><i class="fas fa-globe mr-1" aria-hidden=true></i></a><div class=dropdown-menu><div class="dropdown-item dropdown-item-active"><span>中文 (简体)</span></div><a class=dropdown-item href=https://s-cube-xmu.github.io/publication/pinolo/><span>English</span></a></div></li></ul></div></nav></header></div><div class=page-body><div class=pub><div class="article-container pt-3"><h1>Pinolo: Detecting Logical Bugs in Database Management Systems with Approximate Query Synthesis</h1><div class=article-metadata><div><span><a href=/zh/author/zongyin-hao/>Zongyin Hao</a></span>, <span><a href=/zh/author/quanfeng-huang/>Quanfeng Huang</a></span>, <span><a href=/zh/author/chengpeng-wang/>Chengpeng Wang</a></span>, <span><a href=/zh/author/jianfeng-wang/>Jianfeng Wang</a></span>, <span><a href=/zh/author/yushan-zhang/>Yushan Zhang</a></span>, <span><a href=/zh/author/rongxin-wu/>Rongxin Wu</a></span>, <span><a href=/zh/author/charles-zhang/>Charles Zhang</a></span></div><span class=article-date>七月, 2023</span></div><div class="btn-links mb-3"><a class="btn btn-outline-primary btn-page-header" href=/uploads/atc23-hao.pdf target=_blank rel=noopener>PDF</a>
-<a href=# class="btn btn-outline-primary btn-page-header js-cite-modal" data-filename=/zh/publication/pinolo/cite.bib>引用</a>
-<a class="btn btn-outline-primary btn-page-header" href=https://www.usenix.org/conference/atc23/presentation/hao target=_blank rel=noopener>Paper Link</a></div></div><div class=article-container><h3>摘要</h3><p class=pub-abstract>DBMSs (Database Management Systems) are essential in modern enterprise software. Thus, ensuring the correctness of DBMSs is critical for enterprise applications. Among various kinds of bugs, logical bugs, which make a DBMS return an incorrect result set for a given SQL query, are the most challenging for detection since they typically do not result in apparent manifestations (e.g., crashes) and are likely to go unnoticed by users. The key challenge of detecting logical bugs is the test oracle problem, i.e., how to automatically characterize the expected results for a given query. The state-of-theart approaches focus on generating the equivalent forms of queries via the customized rules, which rewrite a seed query to achieve the equivalent transformation. This dramatically limits the forms of SQL queries fed to the DBMS and thus leads to the under-reporting of many deeply-hidden logical bugs. In this paper, we propose a novel approach, PINOLO, to constructing a test oracle for logical bugs. Instead of generating the equivalent mutants of a seed query, our idea is to synthesize the queries that theoretically should return a superset or a subset of the result set of the seed query, forming the over-approximations or under-approximations of the seed query. A logical bug is detected if the result set returned by our synthesized query does not follow the expected approximation relation. We implemented our idea as a DBMS testing system and evaluated it on four widely-used DBMSs: MySQL, MariaDB, TiDB, and OceanBase. By the time of writing, PINOLO has found 41 unique logical bugs in these DBMSs, 39 of which have been confirmed by developers.</p><div class=row><div class=col-md-1></div><div class=col-md-10><div class=row><div class="col-12 col-md-3 pub-row-heading">类型</div><div class="col-12 col-md-9"><a href=/zh/publication/#1>会议文章</a></div></div></div><div class=col-md-1></div></div><div class="d-md-none space-below"></div><div class=row><div class=col-md-1></div><div class=col-md-10><div class=row><div class="col-12 col-md-3 pub-row-heading">出版物</div><div class="col-12 col-md-9">In <em>Annual Technical Conference</em></div></div></div><div class=col-md-1></div></div><div class="d-md-none space-below"></div><div class=space-below></div><div class=article-style></div><div class=article-tags><a class="badge badge-light" href=/zh/tag/dbms/>DBMS</a>
-<a class="badge badge-light" href=/zh/tag/logical-bug/>Logical bug</a></div><div class=share-box><ul class=share><li><a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fpinolo%2F&amp;text=Pinolo%3A+Detecting+Logical+Bugs+in+Database+Management+Systems+with+Approximate+Query+Synthesis" target=_blank rel=noopener class=share-btn-twitter aria-label=twitter><i class="fab fa-twitter"></i></a></li><li><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fpinolo%2F&amp;t=Pinolo%3A+Detecting+Logical+Bugs+in+Database+Management+Systems+with+Approximate+Query+Synthesis" target=_blank rel=noopener class=share-btn-facebook aria-label=facebook><i class="fab fa-facebook"></i></a></li><li><a href="mailto:?subject=Pinolo%3A%20Detecting%20Logical%20Bugs%20in%20Database%20Management%20Systems%20with%20Approximate%20Query%20Synthesis&amp;body=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fpinolo%2F" target=_blank rel=noopener class=share-btn-email aria-label=envelope><i class="fas fa-envelope"></i></a></li><li><a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fpinolo%2F&amp;title=Pinolo%3A+Detecting+Logical+Bugs+in+Database+Management+Systems+with+Approximate+Query+Synthesis" target=_blank rel=noopener class=share-btn-linkedin aria-label=linkedin-in><i class="fab fa-linkedin-in"></i></a></li><li><a href="whatsapp://send?text=Pinolo%3A+Detecting+Logical+Bugs+in+Database+Management+Systems+with+Approximate+Query+Synthesis%20https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fpinolo%2F" target=_blank rel=noopener class=share-btn-whatsapp aria-label=whatsapp><i class="fab fa-whatsapp"></i></a></li><li><a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fpinolo%2F&amp;title=Pinolo%3A+Detecting+Logical+Bugs+in+Database+Management+Systems+with+Approximate+Query+Synthesis" target=_blank rel=noopener class=share-btn-weibo aria-label=weibo><i class="fab fa-weibo"></i></a></li></ul></div></div></div></div><div class=page-footer><div class=container><footer class=site-footer><p class="powered-by copyright-license-text">Copyright © 2019 - 2023 System and Software Security Lab @ XMU</p><p class=powered-by>由<a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a>支持发布——免费<a href=https://github.com/wowchemy/wowchemy-hugo-themes target=_blank rel=noopener>开源</a>网站，为创作者赋能。</p></footer></div></div><script src=/js/vendor-bundle.min.32ee83730ed883becad04bc5170512cc.js></script>
-<script id=page-data type=application/json>{"use_headroom":true}</script><script src=/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js type=module></script>
-<script src=/zh/js/wowchemy.min.0da3fd7a93c07d11d5561e9713f84757.js></script><div id=modal class="modal fade" role=dialog><div class=modal-dialog><div class=modal-content><div class=modal-header><h5 class=modal-title>引用</h5><button type=button class=close data-dismiss=modal aria-label=Close>
-<span aria-hidden=true>&#215;</span></button></div><div class=modal-body><pre><code></code></pre></div><div class=modal-footer><a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank><i class="fas fa-copy"></i> 复制</a>
-<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank><i class="fas fa-download"></i> 下载</a><div id=modal-error></div></div></div></div></div><script src=/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js type=module></script></body></html>
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: 2023年12月19日 --><html lang="zh-Hans" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.312fa478a18a798c9270bab324760a16.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<meta name="description" content="DBMSs (Database Management Systems) are essential in modern enterprise software. Thus, ensuring the correctness of DBMSs is critical for enterprise applications. Among various kinds of bugs, logical bugs, which make a DBMS return an incorrect result set for a given SQL query, are the most challenging for detection since they typically do not result in apparent manifestations (e.g., crashes) and are likely to go unnoticed by users. The key challenge of detecting logical bugs is the test oracle problem, i.e., how to automatically characterize the expected results for a given query. The state-of-theart approaches focus on generating the equivalent forms of queries via the customized rules, which rewrite a seed query to achieve the equivalent transformation. This dramatically limits the forms of SQL queries fed to the DBMS and thus leads to the under-reporting of many deeply-hidden logical bugs. In this paper, we propose a novel approach, PINOLO, to constructing a test oracle for logical bugs. Instead of generating the equivalent mutants of a seed query, our idea is to synthesize the queries that theoretically should return a superset or a subset of the result set of the seed query, forming the over-approximations or under-approximations of the seed query. A logical bug is detected if the result set returned by our synthesized query does not follow the expected approximation relation. We implemented our idea as a DBMS testing system and evaluated it on four widely-used DBMSs: MySQL, MariaDB, TiDB, and OceanBase. By the time of writing, PINOLO has found 41 unique logical bugs in these DBMSs, 39 of which have been confirmed by developers." />
+
+
+
+  <link rel="alternate" hreflang="en" href="https://s-cube-xmu.github.io/publication/pinolo/" />
+
+<link rel="alternate" hreflang="zh-Hans" href="https://s-cube-xmu.github.io/zh/publication/pinolo/" />
+<link rel="canonical" href="https://s-cube-xmu.github.io/zh/publication/pinolo/" />
+
+
+
+  <link rel="manifest" href="/zh/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="系统与软件安全实验室" />
+<meta property="og:url" content="https://s-cube-xmu.github.io/zh/publication/pinolo/" />
+<meta property="og:title" content="Pinolo: Detecting Logical Bugs in Database Management Systems with Approximate Query Synthesis | 系统与软件安全实验室" />
+<meta property="og:description" content="DBMSs (Database Management Systems) are essential in modern enterprise software. Thus, ensuring the correctness of DBMSs is critical for enterprise applications. Among various kinds of bugs, logical bugs, which make a DBMS return an incorrect result set for a given SQL query, are the most challenging for detection since they typically do not result in apparent manifestations (e.g., crashes) and are likely to go unnoticed by users. The key challenge of detecting logical bugs is the test oracle problem, i.e., how to automatically characterize the expected results for a given query. The state-of-theart approaches focus on generating the equivalent forms of queries via the customized rules, which rewrite a seed query to achieve the equivalent transformation. This dramatically limits the forms of SQL queries fed to the DBMS and thus leads to the under-reporting of many deeply-hidden logical bugs. In this paper, we propose a novel approach, PINOLO, to constructing a test oracle for logical bugs. Instead of generating the equivalent mutants of a seed query, our idea is to synthesize the queries that theoretically should return a superset or a subset of the result set of the seed query, forming the over-approximations or under-approximations of the seed query. A logical bug is detected if the result set returned by our synthesized query does not follow the expected approximation relation. We implemented our idea as a DBMS testing system and evaluated it on four widely-used DBMSs: MySQL, MariaDB, TiDB, and OceanBase. By the time of writing, PINOLO has found 41 unique logical bugs in these DBMSs, 39 of which have been confirmed by developers." /><meta property="og:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2023-01-01T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2023-07-10T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://s-cube-xmu.github.io/zh/publication/pinolo/"
+  },
+  "headline": "Pinolo: Detecting Logical Bugs in Database Management Systems with Approximate Query Synthesis",
+  
+  "datePublished": "2023-01-01T00:00:00Z",
+  "dateModified": "2023-07-10T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Zongyin Hao"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "系统与软件安全实验室",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "DBMSs (Database Management Systems) are essential in modern enterprise software. Thus, ensuring the correctness of DBMSs is critical for enterprise applications. Among various kinds of bugs, logical bugs, which make a DBMS return an incorrect result set for a given SQL query, are the most challenging for detection since they typically do not result in apparent manifestations (e.g., crashes) and are likely to go unnoticed by users. The key challenge of detecting logical bugs is the test oracle problem, i.e., how to automatically characterize the expected results for a given query. The state-of-theart approaches focus on generating the equivalent forms of queries via the customized rules, which rewrite a seed query to achieve the equivalent transformation. This dramatically limits the forms of SQL queries fed to the DBMS and thus leads to the under-reporting of many deeply-hidden logical bugs. In this paper, we propose a novel approach, PINOLO, to constructing a test oracle for logical bugs. Instead of generating the equivalent mutants of a seed query, our idea is to synthesize the queries that theoretically should return a superset or a subset of the result set of the seed query, forming the over-approximations or under-approximations of the seed query. A logical bug is detected if the result set returned by our synthesized query does not follow the expected approximation relation. We implemented our idea as a DBMS testing system and evaluated it on four widely-used DBMSs: MySQL, MariaDB, TiDB, and OceanBase. By the time of writing, PINOLO has found 41 unique logical bugs in these DBMSs, 39 of which have been confirmed by developers."
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Pinolo: Detecting Logical Bugs in Database Management Systems with Approximate Query Synthesis | 系统与软件安全实验室</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="89d5d46f70a2b9e63cafe6fbd9be0a7c" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.fe8634e7d00f14d07fb33caf14cc8e55.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/zh/">系统与软件安全实验室</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="切换导航">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/zh/">系统与软件安全实验室</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/post"><span>新闻</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/people"><span>成员</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/publication"><span>科研成果</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/contact"><span>联系我们</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        <li class="nav-item dropdown i18n-dropdown">
+          <a href="#" class="nav-link " data-toggle="dropdown"
+             aria-haspopup="true" aria-label="语言">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item dropdown-item-active">
+              <span>中文 (简体)</span>
+            </div>
+            
+            <a class="dropdown-item" href="https://s-cube-xmu.github.io/publication/pinolo/">
+              <span>English</span>
+            </a>
+            
+          </div>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+
+
+
+
+
+<div class="pub">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Pinolo: Detecting Logical Bugs in Database Management Systems with Approximate Query Synthesis</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      <a href="/zh/author/zongyin-hao/">Zongyin Hao</a></span>, <span >
+      <a href="/zh/author/quanfeng-huang/">Quanfeng Huang</a></span>, <span >
+      <a href="/zh/author/chengpeng-wang/">Chengpeng Wang</a></span>, <span >
+      <a href="/zh/author/jianfeng-wang/">Jianfeng Wang</a></span>, <span >
+      <a href="/zh/author/yushan-zhang/">Yushan Zhang</a></span>, <span >
+      <a href="/zh/author/rongxin-wu/">Rongxin Wu</a></span>, <span >
+      <a href="/zh/author/charles-zhang/">Charles Zhang</a></span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    七月, 2023
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header" href="/uploads/atc23-hao.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header js-cite-modal"
+        data-filename="/zh/publication/pinolo/cite.bib">
+  引用
+</a>
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header" href="https://www.usenix.org/conference/atc23/presentation/hao" target="_blank" rel="noopener">
+    Paper Link</a>
+
+
+</div>
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    
+    <h3>摘要</h3>
+    <p class="pub-abstract">DBMSs (Database Management Systems) are essential in modern enterprise software. Thus, ensuring the correctness of DBMSs is critical for enterprise applications. Among various kinds of bugs, logical bugs, which make a DBMS return an incorrect result set for a given SQL query, are the most challenging for detection since they typically do not result in apparent manifestations (e.g., crashes) and are likely to go unnoticed by users. The key challenge of detecting logical bugs is the test oracle problem, i.e., how to automatically characterize the expected results for a given query. The state-of-theart approaches focus on generating the equivalent forms of queries via the customized rules, which rewrite a seed query to achieve the equivalent transformation. This dramatically limits the forms of SQL queries fed to the DBMS and thus leads to the under-reporting of many deeply-hidden logical bugs. In this paper, we propose a novel approach, PINOLO, to constructing a test oracle for logical bugs. Instead of generating the equivalent mutants of a seed query, our idea is to synthesize the queries that theoretically should return a superset or a subset of the result set of the seed query, forming the over-approximations or under-approximations of the seed query. A logical bug is detected if the result set returned by our synthesized query does not follow the expected approximation relation. We implemented our idea as a DBMS testing system and evaluated it on four widely-used DBMSs: MySQL, MariaDB, TiDB, and OceanBase. By the time of writing, PINOLO has found 41 unique logical bugs in these DBMSs, 39 of which have been confirmed by developers.</p>
+    
+
+    
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">类型</div>
+          <div class="col-12 col-md-9">
+            <a href="/zh/publication/#1">
+              会议文章
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">出版物</div>
+          <div class="col-12 col-md-9">In <em>Annual Technical Conference</em></div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style"><!-- 
+
+
+<div class="alert alert-note">
+  <div>
+    Click the <em>Cite</em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  </div>
+</div>
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). -->
+</div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/zh/tag/dbms/">DBMS</a>
+  
+  <a class="badge badge-light" href="/zh/tag/logical-bug/">Logical bug</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fpinolo%2F&amp;text=Pinolo%3A&#43;Detecting&#43;Logical&#43;Bugs&#43;in&#43;Database&#43;Management&#43;Systems&#43;with&#43;Approximate&#43;Query&#43;Synthesis" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fpinolo%2F&amp;t=Pinolo%3A&#43;Detecting&#43;Logical&#43;Bugs&#43;in&#43;Database&#43;Management&#43;Systems&#43;with&#43;Approximate&#43;Query&#43;Synthesis" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=Pinolo%3A%20Detecting%20Logical%20Bugs%20in%20Database%20Management%20Systems%20with%20Approximate%20Query%20Synthesis&amp;body=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fpinolo%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fpinolo%2F&amp;title=Pinolo%3A&#43;Detecting&#43;Logical&#43;Bugs&#43;in&#43;Database&#43;Management&#43;Systems&#43;with&#43;Approximate&#43;Query&#43;Synthesis" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Pinolo%3A&#43;Detecting&#43;Logical&#43;Bugs&#43;in&#43;Database&#43;Management&#43;Systems&#43;with&#43;Approximate&#43;Query&#43;Synthesis%20https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fpinolo%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fzh%2Fpublication%2Fpinolo%2F&amp;title=Pinolo%3A&#43;Detecting&#43;Logical&#43;Bugs&#43;in&#43;Database&#43;Management&#43;Systems&#43;with&#43;Approximate&#43;Query&#43;Synthesis" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <p class="powered-by copyright-license-text">
+    Copyright © 2019 - 2023 System and Software Security Lab @ XMU
+  </p>
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      由<a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>支持发布——免费<a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">开源</a>网站，为创作者赋能。
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.32ee83730ed883becad04bc5170512cc.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/zh/js/wowchemy.min.0da3fd7a93c07d11d5561e9713f84757.js"></script>
+
+
+
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">引用</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> 复制
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> 下载
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

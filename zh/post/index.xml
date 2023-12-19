@@ -1,21 +1,68 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Latest News | 系统与软件安全实验室</title><link>https://s-cube-xmu.github.io/zh/post/</link><atom:link href="https://s-cube-xmu.github.io/zh/post/index.xml" rel="self" type="application/rss+xml"/><description>Latest News</description><generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 10 Oct 2023 00:00:00 +0000</lastBuildDate><image><url>https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png</url><title>Latest News</title><link>https://s-cube-xmu.github.io/zh/post/</link></image><item><title>Our third-party library related bug detection work has been accepted by ICSE 2024</title><link>https://s-cube-xmu.github.io/zh/post/libalchemy_icse24/</link><pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/zh/post/libalchemy_icse24/</guid><description>&lt;p>Our database logical bugs detection work has been accepted by ICSE 2024.&lt;/p>
-&lt;ul class="cta-group">
-&lt;li>
-&lt;a href="https://s-cube-xmu.github.io/publication/" class="btn btn-primary px-3 py-3">Details of publications →&lt;/a>
-&lt;/li>
-&lt;/ul></description></item><item><title>Our database defect detection work has been accepted by ATC 2023</title><link>https://s-cube-xmu.github.io/zh/post/atc2023/</link><pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/zh/post/atc2023/</guid><description>&lt;p>Our database defect detection work has been accepted by &lt;a href="https://www.usenix.org/conference/atc23/presentation/hao" target="_blank" rel="noopener">ATC 2023&lt;/a>.&lt;/p>
-&lt;ul class="cta-group">
-&lt;li>
-&lt;a href="https://s-cube-xmu.github.io/publication/" class="btn btn-primary px-3 py-3">Details of publications →&lt;/a>
-&lt;/li>
-&lt;/ul></description></item><item><title>Our accelerating build script error detection work has been accepted by ASE 2022</title><link>https://s-cube-xmu.github.io/zh/post/virtualbuild2022/</link><pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/zh/post/virtualbuild2022/</guid><description>&lt;p>Our accelerating build script error detection work has been accepted by &lt;a href="https://dl.acm.org/doi/10.1145/3551349.3556930" target="_blank" rel="noopener">ASE 2022&lt;/a>.&lt;/p>
-&lt;ul class="cta-group">
-&lt;li>
-&lt;a href="https://s-cube-xmu.github.io/publication/" class="btn btn-primary px-3 py-3">Details of publications →&lt;/a>
-&lt;/li>
-&lt;/ul></description></item><item><title>Our python ecosystem management work has been accepted by ASE 2022</title><link>https://s-cube-xmu.github.io/zh/post/smartpip2022/</link><pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/zh/post/smartpip2022/</guid><description>&lt;p>Our database logical bugs detection work has been accepted by &lt;a href="https://dl.acm.org/doi/10.1145/3551349.3560437" target="_blank" rel="noopener">ASE 2022&lt;/a>.&lt;/p>
-&lt;ul class="cta-group">
-&lt;li>
-&lt;a href="https://s-cube-xmu.github.io/publication/" class="btn btn-primary px-3 py-3">Details of publications →&lt;/a>
-&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Latest News | 系统与软件安全实验室</title>
+    <link>https://s-cube-xmu.github.io/zh/post/</link>
+      <atom:link href="https://s-cube-xmu.github.io/zh/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Latest News</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 10 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png</url>
+      <title>Latest News</title>
+      <link>https://s-cube-xmu.github.io/zh/post/</link>
+    </image>
+    
+    <item>
+      <title>Our third-party library related bug detection work has been accepted by ICSE 2024</title>
+      <link>https://s-cube-xmu.github.io/zh/post/libalchemy_icse24/</link>
+      <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/zh/post/libalchemy_icse24/</guid>
+      <description>&lt;p&gt;Our database logical bugs detection work has been accepted by ICSE 2024.&lt;/p&gt;
+&lt;ul class=&#34;cta-group&#34;&gt;
+  &lt;li&gt;
+    &lt;a href=&#34;https://s-cube-xmu.github.io/publication/&#34;  class=&#34;btn btn-primary px-3 py-3&#34;&gt;Details of publications →&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Our database defect detection work has been accepted by ATC 2023</title>
+      <link>https://s-cube-xmu.github.io/zh/post/atc2023/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/zh/post/atc2023/</guid>
+      <description>&lt;p&gt;Our database defect detection work has been accepted by &lt;a href=&#34;https://www.usenix.org/conference/atc23/presentation/hao&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ATC 2023&lt;/a&gt;.&lt;/p&gt;
+&lt;ul class=&#34;cta-group&#34;&gt;
+  &lt;li&gt;
+    &lt;a href=&#34;https://s-cube-xmu.github.io/publication/&#34;  class=&#34;btn btn-primary px-3 py-3&#34;&gt;Details of publications →&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Our accelerating build script error detection work has been accepted by ASE 2022</title>
+      <link>https://s-cube-xmu.github.io/zh/post/virtualbuild2022/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/zh/post/virtualbuild2022/</guid>
+      <description>&lt;p&gt;Our accelerating build script error detection work has been accepted by &lt;a href=&#34;https://dl.acm.org/doi/10.1145/3551349.3556930&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ASE 2022&lt;/a&gt;.&lt;/p&gt;
+&lt;ul class=&#34;cta-group&#34;&gt;
+  &lt;li&gt;
+    &lt;a href=&#34;https://s-cube-xmu.github.io/publication/&#34;  class=&#34;btn btn-primary px-3 py-3&#34;&gt;Details of publications →&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Our python ecosystem management work has been accepted by ASE 2022</title>
+      <link>https://s-cube-xmu.github.io/zh/post/smartpip2022/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/zh/post/smartpip2022/</guid>
+      <description>&lt;p&gt;Our database logical bugs detection work has been accepted by &lt;a href=&#34;https://dl.acm.org/doi/10.1145/3551349.3560437&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ASE 2022&lt;/a&gt;.&lt;/p&gt;
+&lt;ul class=&#34;cta-group&#34;&gt;
+  &lt;li&gt;
+    &lt;a href=&#34;https://s-cube-xmu.github.io/publication/&#34;  class=&#34;btn btn-primary px-3 py-3&#34;&gt;Details of publications →&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

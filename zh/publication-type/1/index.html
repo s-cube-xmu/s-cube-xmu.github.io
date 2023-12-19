@@ -1,33 +1,2078 @@
-<!doctype html><html lang=zh-Hans><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=generator content="Wowchemy 5.7.0 for Hugo"><link rel=stylesheet href=/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css media=print onload='this.media="all"'><link rel=stylesheet href=/css/wowchemy.312fa478a18a798c9270bab324760a16.css><link rel=stylesheet href=/css/libs/chroma/github-light.min.css title=hl-light media=print onload='this.media="all"'><link rel=stylesheet href=/css/libs/chroma/dracula.min.css title=hl-dark media=print onload='this.media="all"' disabled><meta name=description content><link rel=alternate hreflang=en href=https://s-cube-xmu.github.io/publication-type/1/><link rel=alternate hreflang=zh-hans href=https://s-cube-xmu.github.io/zh/publication-type/1/><link rel=canonical href=https://s-cube-xmu.github.io/zh/publication-type/1/><link rel=manifest href=/zh/manifest.webmanifest><link rel=icon type=image/png href=/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_32x32_fill_lanczos_center_3.png><link rel=apple-touch-icon type=image/png href=/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_180x180_fill_lanczos_center_3.png><meta name=theme-color content="#1565c0"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png"><meta property="og:site_name" content="系统与软件安全实验室"><meta property="og:url" content="https://s-cube-xmu.github.io/zh/publication-type/1/"><meta property="og:title" content="1 | 系统与软件安全实验室"><meta property="og:description" content><meta property="og:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="zh-Hans"><meta property="og:updated_time" content="2023-07-10T00:00:00+00:00"><link rel=alternate href=/zh/publication-type/1/index.xml type=application/rss+xml title=系统与软件安全实验室><title>1 | 系统与软件安全实验室</title></head><body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper><script src=/js/wowchemy-init.min.fe8634e7d00f14d07fb33caf14cc8e55.js></script><div class="page-header header--fixed"><header><nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main><div class=container-xl><div class="d-none d-lg-inline-flex"><a class=navbar-brand href=/zh/>系统与软件安全实验室</a></div><button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar-content aria-expanded=false aria-label=切换导航>
-<span><i class="fas fa-bars"></i></span></button><div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none"><a class=navbar-brand href=/zh/>系统与软件安全实验室</a></div><div class="navbar-collapse main-menu-item collapse justify-content-end" id=navbar-content><ul class="navbar-nav d-md-inline-flex"><li class=nav-item><a class=nav-link href=/zh/post><span>新闻</span></a></li><li class=nav-item><a class=nav-link href=/zh/people><span>成员</span></a></li><li class=nav-item><a class=nav-link href=/zh/publication><span>科研成果</span></a></li><li class=nav-item><a class=nav-link href=/zh/contact><span>联系我们</span></a></li></ul></div><ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2"><li class="nav-item dropdown i18n-dropdown"><a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label=语言><i class="fas fa-globe mr-1" aria-hidden=true></i></a><div class=dropdown-menu><div class="dropdown-item dropdown-item-active"><span>中文 (简体)</span></div><a class=dropdown-item href=https://s-cube-xmu.github.io/publication-type/1/><span>English</span></a></div></li></ul></div></nav></header></div><div class=page-body><div class="universal-wrapper pt-3"><h1>1</h1></div><div class=universal-wrapper><div class="media stream-item view-compact"><div class=media-body><div class="section-subheading article-title mb-0 mt-0"><a href=/zh/publication/pinolo/>Pinolo: Detecting Logical Bugs in Database Management Systems with Approximate Query Synthesis</a></div><a href=/zh/publication/pinolo/ class=summary-link><div class=article-style>DBMSs (Database Management Systems) are essential in modern enterprise software. Thus, ensuring the correctness of DBMSs is critical …</div></a><div class="stream-meta article-metadata"><div><span><a href=/zh/author/zongyin-hao/>Zongyin Hao</a></span>, <span><a href=/zh/author/quanfeng-huang/>Quanfeng Huang</a></span>, <span><a href=/zh/author/chengpeng-wang/>Chengpeng Wang</a></span>, <span><a href=/zh/author/jianfeng-wang/>Jianfeng Wang</a></span>, <span><a href=/zh/author/yushan-zhang/>Yushan Zhang</a></span>, <span><a href=/zh/author/rongxin-wu/>Rongxin Wu</a></span>, <span><a href=/zh/author/charles-zhang/>Charles Zhang</a></span></div></div><div class=btn-links><a class="btn btn-outline-primary btn-page-header btn-sm" href=/uploads/atc23-hao.pdf target=_blank rel=noopener>PDF</a>
-<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/zh/publication/pinolo/cite.bib>引用</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://www.usenix.org/conference/atc23/presentation/hao target=_blank rel=noopener>Paper Link</a></div></div><div class=ml-3></div></div><div class="media stream-item view-compact"><div class=media-body><div class="section-subheading article-title mb-0 mt-0"><a href=/zh/publication/detecting-jvm-jit-compiler-bugs-2023/>Detecting JVM JIT Compiler Bugs via Exploring Two-Dimensional Input Spaces</a></div><a href=/zh/publication/detecting-jvm-jit-compiler-bugs-2023/ class=summary-link><div class=article-style>Java Virtual Machine (JVM) is the fundamental software system that supports the interpretation and execution of Java bytecode. To …</div></a><div class="stream-meta article-metadata"><div><span><a href=/zh/author/haoxiang-jia/>Haoxiang Jia</a></span>, <span><a href=/zh/author/ming-wen/>Ming Wen</a></span>, <span><a href=/zh/author/zifan-xie/>Zifan Xie</a></span>, <span><a href=/zh/author/xiaochen-guo/>Xiaochen Guo</a></span>, <span><a href=/zh/author/rongxin-wu/>Rongxin Wu</a></span>, <span><a href=/zh/author/maolin-sun/>Maolin Sun</a></span>, <span><a href=/zh/author/kang-chen/>Kang Chen</a></span>, <span><a href=/zh/author/hai-jin/>Hai Jin</a></span></div></div><div class=btn-links><a class="btn btn-outline-primary btn-page-header btn-sm" href=/uploads/ICSE-JOpFuzzer-Checked.pdf target=_blank rel=noopener>PDF</a>
-<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/zh/publication/detecting-jvm-jit-compiler-bugs-2023/cite.bib>引用</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://doi.org/10.1109/ICSE48619.2023.00016 target=_blank rel=noopener>DOI</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://ieeexplore.ieee.org/abstract/document/10172514 target=_blank rel=noopener>Paper Link</a></div></div><div class=ml-3></div></div><div class="media stream-item view-compact"><div class=media-body><div class="section-subheading article-title mb-0 mt-0"><a href=/zh/publication/improving-java-deserialization-gadget-chain-mining-2023/>Improving Java Deserialization Gadget Chain Mining via Overriding-Guided Object Generation</a></div><a href=/zh/publication/improving-java-deserialization-gadget-chain-mining-2023/ class=summary-link><div class=article-style>Java (de)serialization is prone to causing security-critical vulnerabilities that attackers can invoke existing methods (gadgets) on …</div></a><div class="stream-meta article-metadata"><div><span><a href=/zh/author/sicong-cao/>Sicong Cao</a></span>, <span><a href=/zh/author/xiaobing-sun/>Xiaobing Sun</a></span>, <span><a href=/zh/author/xiaoxue-wu/>Xiaoxue Wu</a></span>, <span><a href=/zh/author/lili-bo/>Lili Bo</a></span>, <span><a href=/zh/author/bin-li/>Bin Li</a></span>, <span><a href=/zh/author/rongxin-wu/>Rongxin Wu</a></span>, <span><a href=/zh/author/wei-liu/>Wei Liu</a></span>, <span><a href=/zh/author/biao-he/>Biao He</a></span>, <span><a href=/zh/author/yu-ouyang/>Yu Ouyang</a></span>, <span><a href=/zh/author/jiajia-li/>Jiajia Li</a></span></div></div><div class=btn-links><a class="btn btn-outline-primary btn-page-header btn-sm" href=/uploads/2303.07593.pdf target=_blank rel=noopener>PDF</a>
-<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/zh/publication/improving-java-deserialization-gadget-chain-mining-2023/cite.bib>引用</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://doi.org/10.1109/ICSE48619.2023.00044 target=_blank rel=noopener>DOI</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://ieeexplore.ieee.org/document/10172888 target=_blank rel=noopener>Paper Link</a></div></div><div class=ml-3></div></div><div class="media stream-item view-compact"><div class=media-body><div class="section-subheading article-title mb-0 mt-0"><a href=/zh/publication/virtualbuild/>Accelerating Build Dependency Error Detection via Virtual Build</a></div><a href=/zh/publication/virtualbuild/ class=summary-link><div class=article-style>Build scripts play an important role in transforming the source code into executable artifacts. However, the development of build …</div></a><div class="stream-meta article-metadata"><div><span><a href=/zh/author/rongxin-wu/>Rongxin Wu</a></span>, <span><a href=/zh/author/minglei-chen/>Minglei Chen</a></span>, <span><a href=/zh/author/chengpeng-wang/>Chengpeng Wang</a></span>, <span><a href=/zh/author/gang-fan/>Gang Fan</a></span>, <span><a href=/zh/author/jiguang-qiu/>Jiguang Qiu</a></span>, <span><a href=/zh/author/charles-zhang/>Charles Zhang</a></span></div></div><div class=btn-links><a class="btn btn-outline-primary btn-page-header btn-sm" href=/uploads/VirtualBuild.pdf target=_blank rel=noopener>PDF</a>
-<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/zh/publication/virtualbuild/cite.bib>引用</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://dl.acm.org/doi/10.1145/3551349.3556930 target=_blank rel=noopener>Paper Link</a></div></div><div class=ml-3></div></div><div class="media stream-item view-compact"><div class=media-body><div class="section-subheading article-title mb-0 mt-0"><a href=/zh/publication/smartpip/>smartPip: A Smart Approach to Resolving Python Dependency Conflict Issues</a></div><a href=/zh/publication/smartpip/ class=summary-link><div class=article-style>As one of the representative software ecosystems, PyPI, together with the Python package management tool pip, greatly facilitates …</div></a><div class="stream-meta article-metadata"><div><span><a href=/zh/author/chao-wang/>Chao Wang</a></span>, <span><a href=/zh/author/rongxin-wu/>Rongxin Wu</a></span>, <span><a href=/zh/author/haohao-song/>Haohao Song</a></span>, <span><a href=/zh/author/jiwu-shu/>Jiwu Shu</a></span>, <span><a href=/zh/author/guoqing-li/>Guoqing Li</a></span></div></div><div class=btn-links><a class="btn btn-outline-primary btn-page-header btn-sm" href=/uploads/smartpip.pdf target=_blank rel=noopener>PDF</a>
-<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/zh/publication/smartpip/cite.bib>引用</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://dl.acm.org/doi/10.1145/3551349.3560437 target=_blank rel=noopener>Paper Link</a></div></div><div class=ml-3></div></div><div class="media stream-item view-compact"><div class=media-body><div class="section-subheading article-title mb-0 mt-0"><a href=/zh/publication/mvd-2022/>MVD: memory-related vulnerability detection based on flow-sensitive graph neural networks</a></div><a href=/zh/publication/mvd-2022/ class=summary-link><div class=article-style>Memory-related vulnerabilities constitute severe threats to the security of modern software. Despite the success of deep learning-based …</div></a><div class="stream-meta article-metadata"><div><span><a href=/zh/author/sicong-cao/>Sicong Cao</a></span>, <span><a href=/zh/author/xiaobing-sun/>Xiaobing Sun</a></span>, <span><a href=/zh/author/lili-bo/>Lili Bo</a></span>, <span><a href=/zh/author/rongxin-wu/>Rongxin Wu</a></span>, <span><a href=/zh/author/bin-li/>Bin Li</a></span>, <span><a href=/zh/author/chuanqi-tao/>Chuanqi Tao</a></span></div></div><div class=btn-links><a class="btn btn-outline-primary btn-page-header btn-sm" href=/uploads/2203.02660.pdf target=_blank rel=noopener>PDF</a>
-<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/zh/publication/mvd-2022/cite.bib>引用</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://doi.org/10.1145/3510003.3510219 target=_blank rel=noopener>DOI</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://ieeexplore.ieee.org/abstract/document/9794007 target=_blank rel=noopener>Paper Link</a></div></div><div class=ml-3></div></div><div class="media stream-item view-compact"><div class=media-body><div class="section-subheading article-title mb-0 mt-0"><a href=/zh/publication/beacon-2022/>BEACON: Directed Grey-Box Fuzzing with Provable Path Pruning</a></div><a href=/zh/publication/beacon-2022/ class=summary-link><div class=article-style>Unlike coverage-based fuzzing that gives equal attention to every part of a code, directed fuzzing aims to direct a fuzzer to a …</div></a><div class="stream-meta article-metadata"><div><span><a href=/zh/author/heqing-huang/>Heqing Huang</a></span>, <span><a href=/zh/author/yiyuan-guo/>Yiyuan Guo</a></span>, <span><a href=/zh/author/qingkai-shi/>Qingkai Shi</a></span>, <span><a href=/zh/author/peisen-yao/>Peisen Yao</a></span>, <span><a href=/zh/author/rongxin-wu/>Rongxin Wu</a></span>, <span><a href=/zh/author/charles-zhang/>Charles Zhang</a></span></div></div><div class=btn-links><a class="btn btn-outline-primary btn-page-header btn-sm" href=/uploads/SP22.pdf target=_blank rel=noopener>PDF</a>
-<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/zh/publication/beacon-2022/cite.bib>引用</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://doi.org/10.1109/SP46214.2022.9833751 target=_blank rel=noopener>DOI</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://ieeexplore.ieee.org/abstract/document/9833751 target=_blank rel=noopener>Paper Link</a></div></div><div class=ml-3></div></div><div class="media stream-item view-compact"><div class=media-body><div class="section-subheading article-title mb-0 mt-0"><a href=/zh/publication/targetingrequirementsviolations-2021/>Targeting Requirements Violations of Autonomous Driving Systems by Dynamic Evolutionary Search</a></div><a href=/zh/publication/targetingrequirementsviolations-2021/ class=summary-link><div class=article-style>Autonomous Driving Systems (ADSs) are complex systems that must satisfy multiple requirements such as safety, compliance to traffic …</div></a><div class="stream-meta article-metadata"><div><span><a href=/zh/author/yixing-luo/>Yixing Luo</a></span>, <span><a href=/zh/author/xiao-yi-zhang/>Xiao-Yi Zhang</a></span>, <span><a href=/zh/author/paolo-arcaini/>Paolo Arcaini</a></span>, <span><a href=/zh/author/zhi-jin/>Zhi Jin</a></span>, <span><a href=/zh/author/haiyan-zhao/>Haiyan Zhao</a></span>, <span><a href=/zh/author/fuyuki-ishikawa/>Fuyuki Ishikawa</a></span>, <span><a href=/zh/author/rongxin-wu/>Rongxin Wu</a></span>, <span><a href=/zh/author/tao-xie/>Tao Xie</a></span></div></div><div class=btn-links><a class="btn btn-outline-primary btn-page-header btn-sm" href=/uploads/Targeting-Requirements-Violations-of-Autonomous.pdf target=_blank rel=noopener>PDF</a>
-<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/zh/publication/targetingrequirementsviolations-2021/cite.bib>引用</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://doi.org/10.1109/ASE51524.2021.9678883 target=_blank rel=noopener>DOI</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://ieeexplore.ieee.org/document/9678883/ target=_blank rel=noopener>Paper Link</a></div></div><div class=ml-3></div></div><div class="media stream-item view-compact"><div class=media-body><div class="section-subheading article-title mb-0 mt-0"><a href=/zh/publication/transcode-2021/>Transcode: Detecting Status Code Mapping Errors in Large-Scale Systems</a></div><a href=/zh/publication/transcode-2021/ class=summary-link><div class=article-style>Status code mappings reveal state shifts of a program, mapping one status code to another. Due to careless programming or the lack of …</div></a><div class="stream-meta article-metadata"><div><span><a href=/zh/author/wensheng-tang/>Wensheng Tang</a></span>, <span><a href=/zh/author/yikun-hu/>Yikun Hu</a></span>, <span><a href=/zh/author/gang-fan/>Gang Fan</a></span>, <span><a href=/zh/author/peisen-yao/>Peisen Yao</a></span>, <span><a href=/zh/author/rongxin-wu/>Rongxin Wu</a></span>, <span><a href=/zh/author/guangyuan-bai/>Guangyuan Bai</a></span>, <span><a href=/zh/author/pengcheng-wang/>Pengcheng Wang</a></span>, <span><a href=/zh/author/charles-zhang/>Charles Zhang</a></span></div></div><div class=btn-links><a class="btn btn-outline-primary btn-page-header btn-sm" href=/uploads/ASE21TransCode.pdf target=_blank rel=noopener>PDF</a>
-<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/zh/publication/transcode-2021/cite.bib>引用</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://doi.org/10.1109/ASE51524.2021.9678823 target=_blank rel=noopener>DOI</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://ieeexplore.ieee.org/document/9678823/ target=_blank rel=noopener>Paper Link</a></div></div><div class=ml-3></div></div><div class="media stream-item view-compact"><div class=media-body><div class="section-subheading article-title mb-0 mt-0"><a href=/zh/publication/sae-2021/>Skeletal Approximation Enumeration for SMT Solver Testing</a></div><a href=/zh/publication/sae-2021/ class=summary-link><div class=article-style>Ensuring the equality of SMT solvers is critical due to its broad spectrum of applications in academia and industry, such as symbolic …</div></a><div class="stream-meta article-metadata"><div><span><a href=/zh/author/peisen-yao/>Peisen Yao</a></span>, <span><a href=/zh/author/heqing-huang/>Heqing Huang</a></span>, <span><a href=/zh/author/wensheng-tang/>Wensheng Tang</a></span>, <span><a href=/zh/author/qingkai-shi/>Qingkai Shi</a></span>, <span><a href=/zh/author/rongxin-wu/>Rongxin Wu</a></span>, <span><a href=/zh/author/charles-zhang/>Charles Zhang</a></span></div></div><div class=btn-links><a class="btn btn-outline-primary btn-page-header btn-sm" href=/uploads/Skeletal-Approximation-Enumeration-for-SMT-Solver-Testing.pdf target=_blank rel=noopener>PDF</a>
-<a href=# class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal" data-filename=/zh/publication/sae-2021/cite.bib>引用</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://doi.org/10.1145/3468264.3468540 target=_blank rel=noopener>DOI</a>
-<a class="btn btn-outline-primary btn-page-header btn-sm" href=https://dl.acm.org/doi/10.1145/3468264.3468540 target=_blank rel=noopener>Paper Link</a></div></div><div class=ml-3></div></div><nav class=mt-1><ul class="pagination justify-content-center"><li class=page-item><a class=page-link href=/zh/publication-type/1/page/2/>&#187;</a></li></ul></nav></div></div><div class=page-footer><div class=container><footer class=site-footer><p class="powered-by copyright-license-text">Copyright © 2019 - 2023 System and Software Security Lab @ XMU</p><p class=powered-by>由<a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a>支持发布——免费<a href=https://github.com/wowchemy/wowchemy-hugo-themes target=_blank rel=noopener>开源</a>网站，为创作者赋能。</p></footer></div></div><script src=/js/vendor-bundle.min.32ee83730ed883becad04bc5170512cc.js></script>
-<script id=page-data type=application/json>{"use_headroom":true}</script><script src=/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js type=module></script>
-<script src=/zh/js/wowchemy.min.0da3fd7a93c07d11d5561e9713f84757.js></script><div id=modal class="modal fade" role=dialog><div class=modal-dialog><div class=modal-content><div class=modal-header><h5 class=modal-title>引用</h5><button type=button class=close data-dismiss=modal aria-label=Close>
-<span aria-hidden=true>&#215;</span></button></div><div class=modal-body><pre><code></code></pre></div><div class=modal-footer><a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank><i class="fas fa-copy"></i> 复制</a>
-<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank><i class="fas fa-download"></i> 下载</a><div id=modal-error></div></div></div></div></div><script src=/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js type=module></script></body></html>
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: 2023年12月19日 --><html lang="zh-Hans" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.312fa478a18a798c9270bab324760a16.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<meta name="description" content="" />
+
+
+
+  <link rel="alternate" hreflang="en" href="https://s-cube-xmu.github.io/publication-type/1/" />
+
+<link rel="alternate" hreflang="zh-Hans" href="https://s-cube-xmu.github.io/zh/publication-type/1/" />
+<link rel="canonical" href="https://s-cube-xmu.github.io/zh/publication-type/1/" />
+
+
+
+  <link rel="manifest" href="/zh/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="系统与软件安全实验室" />
+<meta property="og:url" content="https://s-cube-xmu.github.io/zh/publication-type/1/" />
+<meta property="og:title" content="1 | 系统与软件安全实验室" />
+<meta property="og:description" content="" /><meta property="og:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="zh-Hans" />
+
+  
+    <meta property="og:updated_time" content="2024-04-14T00:00:00&#43;00:00" />
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    <link rel="alternate" href="/zh/publication-type/1/index.xml" type="application/rss+xml" title="系统与软件安全实验室" />
+  
+
+  
+
+
+  
+  <title>1 | 系统与软件安全实验室</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   "  >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.fe8634e7d00f14d07fb33caf14cc8e55.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/zh/">系统与软件安全实验室</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="切换导航">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/zh/">系统与软件安全实验室</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/post"><span>新闻</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/people"><span>成员</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/publication"><span>科研成果</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/zh/contact"><span>联系我们</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        <li class="nav-item dropdown i18n-dropdown">
+          <a href="#" class="nav-link " data-toggle="dropdown"
+             aria-haspopup="true" aria-label="语言">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item dropdown-item-active">
+              <span>中文 (简体)</span>
+            </div>
+            
+            <a class="dropdown-item" href="https://s-cube-xmu.github.io/publication-type/1/">
+              <span>English</span>
+            </a>
+            
+          </div>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+<div class="universal-wrapper pt-3">
+  <h1>1</h1>
+
+  
+
+  
+</div>
+
+
+
+<div class="universal-wrapper">
+  
+
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item view-compact">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/zh/publication/libalchemy/" >LibAlchemy: A Two-Layer Persistent Summary Design for Taming Third-Party Libraries in Static Bug-Finding Systems</a>
+    </div>
+
+    
+    <a href="/zh/publication/libalchemy/"  class="summary-link">
+      <div class="article-style">
+        Despite the benefits of using third-party libraries (TPLs), the misuse of TPL functions raises quality and security concerns. Using …
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  <span >
+      <a href="/zh/author/rongxin-wu/">Rongxin Wu</a></span>, <span >
+      <a href="/zh/author/yuxuan-he/">Yuxuan He</a></span>, <span >
+      <a href="/zh/author/jiafeng-huang/">Jiafeng Huang</a></span>, <span >
+      <a href="/zh/author/chengpeng-wang/">Chengpeng Wang</a></span>, <span >
+      <a href="/zh/author/wensheng-tang/">Wensheng Tang</a></span>, <span >
+      <a href="/zh/author/qingkai-shi/">Qingkai Shi</a></span>, <span >
+      <a href="/zh/author/xiao-xiao/">Xiao Xiao</a></span>, <span >
+      <a href="/zh/author/charles-zhang/">Charles Zhang</a></span>
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item view-compact">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/zh/publication/pinolo/" >Pinolo: Detecting Logical Bugs in Database Management Systems with Approximate Query Synthesis</a>
+    </div>
+
+    
+    <a href="/zh/publication/pinolo/"  class="summary-link">
+      <div class="article-style">
+        DBMSs (Database Management Systems) are essential in modern enterprise software. Thus, ensuring the correctness of DBMSs is critical …
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  <span >
+      <a href="/zh/author/zongyin-hao/">Zongyin Hao</a></span>, <span >
+      <a href="/zh/author/quanfeng-huang/">Quanfeng Huang</a></span>, <span >
+      <a href="/zh/author/chengpeng-wang/">Chengpeng Wang</a></span>, <span >
+      <a href="/zh/author/jianfeng-wang/">Jianfeng Wang</a></span>, <span >
+      <a href="/zh/author/yushan-zhang/">Yushan Zhang</a></span>, <span >
+      <a href="/zh/author/rongxin-wu/">Rongxin Wu</a></span>, <span >
+      <a href="/zh/author/charles-zhang/">Charles Zhang</a></span>
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="/uploads/atc23-hao.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/zh/publication/pinolo/cite.bib">
+  引用
+</a>
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://www.usenix.org/conference/atc23/presentation/hao" target="_blank" rel="noopener">
+    Paper Link</a>
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item view-compact">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/zh/publication/detecting-jvm-jit-compiler-bugs-2023/" >Detecting JVM JIT Compiler Bugs via Exploring Two-Dimensional Input Spaces</a>
+    </div>
+
+    
+    <a href="/zh/publication/detecting-jvm-jit-compiler-bugs-2023/"  class="summary-link">
+      <div class="article-style">
+        Java Virtual Machine (JVM) is the fundamental software system that supports the interpretation and execution of Java bytecode. To …
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  <span >
+      <a href="/zh/author/haoxiang-jia/">Haoxiang Jia</a></span>, <span >
+      <a href="/zh/author/ming-wen/">Ming Wen</a></span>, <span >
+      <a href="/zh/author/zifan-xie/">Zifan Xie</a></span>, <span >
+      <a href="/zh/author/xiaochen-guo/">Xiaochen Guo</a></span>, <span >
+      <a href="/zh/author/rongxin-wu/">Rongxin Wu</a></span>, <span >
+      <a href="/zh/author/maolin-sun/">Maolin Sun</a></span>, <span >
+      <a href="/zh/author/kang-chen/">Kang Chen</a></span>, <span >
+      <a href="/zh/author/hai-jin/">Hai Jin</a></span>
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="/uploads/ICSE-JOpFuzzer-Checked.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/zh/publication/detecting-jvm-jit-compiler-bugs-2023/cite.bib">
+  引用
+</a>
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1109/ICSE48619.2023.00016" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://ieeexplore.ieee.org/abstract/document/10172514" target="_blank" rel="noopener">
+    Paper Link</a>
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item view-compact">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/zh/publication/improving-java-deserialization-gadget-chain-mining-2023/" >Improving Java Deserialization Gadget Chain Mining via Overriding-Guided Object Generation</a>
+    </div>
+
+    
+    <a href="/zh/publication/improving-java-deserialization-gadget-chain-mining-2023/"  class="summary-link">
+      <div class="article-style">
+        Java (de)serialization is prone to causing security-critical vulnerabilities that attackers can invoke existing methods (gadgets) on …
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  <span >
+      <a href="/zh/author/sicong-cao/">Sicong Cao</a></span>, <span >
+      <a href="/zh/author/xiaobing-sun/">Xiaobing Sun</a></span>, <span >
+      <a href="/zh/author/xiaoxue-wu/">Xiaoxue Wu</a></span>, <span >
+      <a href="/zh/author/lili-bo/">Lili Bo</a></span>, <span >
+      <a href="/zh/author/bin-li/">Bin Li</a></span>, <span >
+      <a href="/zh/author/rongxin-wu/">Rongxin Wu</a></span>, <span >
+      <a href="/zh/author/wei-liu/">Wei Liu</a></span>, <span >
+      <a href="/zh/author/biao-he/">Biao He</a></span>, <span >
+      <a href="/zh/author/yu-ouyang/">Yu Ouyang</a></span>, <span >
+      <a href="/zh/author/jiajia-li/">Jiajia Li</a></span>
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="/uploads/2303.07593.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/zh/publication/improving-java-deserialization-gadget-chain-mining-2023/cite.bib">
+  引用
+</a>
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1109/ICSE48619.2023.00044" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://ieeexplore.ieee.org/document/10172888" target="_blank" rel="noopener">
+    Paper Link</a>
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item view-compact">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/zh/publication/virtualbuild/" >Accelerating Build Dependency Error Detection via Virtual Build</a>
+    </div>
+
+    
+    <a href="/zh/publication/virtualbuild/"  class="summary-link">
+      <div class="article-style">
+        Build scripts play an important role in transforming the source code into executable artifacts. However, the development of build …
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  <span >
+      <a href="/zh/author/rongxin-wu/">Rongxin Wu</a></span>, <span >
+      <a href="/zh/author/minglei-chen/">Minglei Chen</a></span>, <span >
+      <a href="/zh/author/chengpeng-wang/">Chengpeng Wang</a></span>, <span >
+      <a href="/zh/author/gang-fan/">Gang Fan</a></span>, <span >
+      <a href="/zh/author/jiguang-qiu/">Jiguang Qiu</a></span>, <span >
+      <a href="/zh/author/charles-zhang/">Charles Zhang</a></span>
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="/uploads/VirtualBuild.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/zh/publication/virtualbuild/cite.bib">
+  引用
+</a>
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://dl.acm.org/doi/10.1145/3551349.3556930" target="_blank" rel="noopener">
+    Paper Link</a>
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item view-compact">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/zh/publication/smartpip/" >smartPip: A Smart Approach to Resolving Python Dependency Conflict Issues</a>
+    </div>
+
+    
+    <a href="/zh/publication/smartpip/"  class="summary-link">
+      <div class="article-style">
+        As one of the representative software ecosystems, PyPI, together with the Python package management tool pip, greatly facilitates …
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  <span >
+      <a href="/zh/author/chao-wang/">Chao Wang</a></span>, <span >
+      <a href="/zh/author/rongxin-wu/">Rongxin Wu</a></span>, <span >
+      <a href="/zh/author/haohao-song/">Haohao Song</a></span>, <span >
+      <a href="/zh/author/jiwu-shu/">Jiwu Shu</a></span>, <span >
+      <a href="/zh/author/guoqing-li/">Guoqing Li</a></span>
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="/uploads/smartpip.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/zh/publication/smartpip/cite.bib">
+  引用
+</a>
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://dl.acm.org/doi/10.1145/3551349.3560437" target="_blank" rel="noopener">
+    Paper Link</a>
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item view-compact">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/zh/publication/mvd-2022/" >MVD: memory-related vulnerability detection based on flow-sensitive graph neural networks</a>
+    </div>
+
+    
+    <a href="/zh/publication/mvd-2022/"  class="summary-link">
+      <div class="article-style">
+        Memory-related vulnerabilities constitute severe threats to the security of modern software. Despite the success of deep learning-based …
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  <span >
+      <a href="/zh/author/sicong-cao/">Sicong Cao</a></span>, <span >
+      <a href="/zh/author/xiaobing-sun/">Xiaobing Sun</a></span>, <span >
+      <a href="/zh/author/lili-bo/">Lili Bo</a></span>, <span >
+      <a href="/zh/author/rongxin-wu/">Rongxin Wu</a></span>, <span >
+      <a href="/zh/author/bin-li/">Bin Li</a></span>, <span >
+      <a href="/zh/author/chuanqi-tao/">Chuanqi Tao</a></span>
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="/uploads/2203.02660.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/zh/publication/mvd-2022/cite.bib">
+  引用
+</a>
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1145/3510003.3510219" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://ieeexplore.ieee.org/abstract/document/9794007" target="_blank" rel="noopener">
+    Paper Link</a>
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item view-compact">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/zh/publication/beacon-2022/" >BEACON: Directed Grey-Box Fuzzing with Provable Path Pruning</a>
+    </div>
+
+    
+    <a href="/zh/publication/beacon-2022/"  class="summary-link">
+      <div class="article-style">
+        Unlike coverage-based fuzzing that gives equal attention to every part of a code, directed fuzzing aims to direct a fuzzer to a …
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  <span >
+      <a href="/zh/author/heqing-huang/">Heqing Huang</a></span>, <span >
+      <a href="/zh/author/yiyuan-guo/">Yiyuan Guo</a></span>, <span >
+      <a href="/zh/author/qingkai-shi/">Qingkai Shi</a></span>, <span >
+      <a href="/zh/author/peisen-yao/">Peisen Yao</a></span>, <span >
+      <a href="/zh/author/rongxin-wu/">Rongxin Wu</a></span>, <span >
+      <a href="/zh/author/charles-zhang/">Charles Zhang</a></span>
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="/uploads/SP22.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/zh/publication/beacon-2022/cite.bib">
+  引用
+</a>
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1109/SP46214.2022.9833751" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://ieeexplore.ieee.org/abstract/document/9833751" target="_blank" rel="noopener">
+    Paper Link</a>
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item view-compact">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/zh/publication/targetingrequirementsviolations-2021/" >Targeting Requirements Violations of Autonomous Driving Systems by Dynamic Evolutionary Search</a>
+    </div>
+
+    
+    <a href="/zh/publication/targetingrequirementsviolations-2021/"  class="summary-link">
+      <div class="article-style">
+        Autonomous Driving Systems (ADSs) are complex systems that must satisfy multiple requirements such as safety, compliance to traffic …
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  <span >
+      <a href="/zh/author/yixing-luo/">Yixing Luo</a></span>, <span >
+      <a href="/zh/author/xiao-yi-zhang/">Xiao-Yi Zhang</a></span>, <span >
+      <a href="/zh/author/paolo-arcaini/">Paolo Arcaini</a></span>, <span >
+      <a href="/zh/author/zhi-jin/">Zhi Jin</a></span>, <span >
+      <a href="/zh/author/haiyan-zhao/">Haiyan Zhao</a></span>, <span >
+      <a href="/zh/author/fuyuki-ishikawa/">Fuyuki Ishikawa</a></span>, <span >
+      <a href="/zh/author/rongxin-wu/">Rongxin Wu</a></span>, <span >
+      <a href="/zh/author/tao-xie/">Tao Xie</a></span>
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="/uploads/Targeting-Requirements-Violations-of-Autonomous.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/zh/publication/targetingrequirementsviolations-2021/cite.bib">
+  引用
+</a>
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1109/ASE51524.2021.9678883" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://ieeexplore.ieee.org/document/9678883/" target="_blank" rel="noopener">
+    Paper Link</a>
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item view-compact">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/zh/publication/transcode-2021/" >Transcode: Detecting Status Code Mapping Errors in Large-Scale Systems</a>
+    </div>
+
+    
+    <a href="/zh/publication/transcode-2021/"  class="summary-link">
+      <div class="article-style">
+        Status code mappings reveal state shifts of a program, mapping one status code to another. Due to careless programming or the lack of …
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  <span >
+      <a href="/zh/author/wensheng-tang/">Wensheng Tang</a></span>, <span >
+      <a href="/zh/author/yikun-hu/">Yikun Hu</a></span>, <span >
+      <a href="/zh/author/gang-fan/">Gang Fan</a></span>, <span >
+      <a href="/zh/author/peisen-yao/">Peisen Yao</a></span>, <span >
+      <a href="/zh/author/rongxin-wu/">Rongxin Wu</a></span>, <span >
+      <a href="/zh/author/guangyuan-bai/">Guangyuan Bai</a></span>, <span >
+      <a href="/zh/author/pengcheng-wang/">Pengcheng Wang</a></span>, <span >
+      <a href="/zh/author/charles-zhang/">Charles Zhang</a></span>
+      </div>
+      
+    </div>
+
+    
+    <div class="btn-links">
+      
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="/uploads/ASE21TransCode.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/zh/publication/transcode-2021/cite.bib">
+  引用
+</a>
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1109/ASE51524.2021.9678823" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://ieeexplore.ieee.org/document/9678823/" target="_blank" rel="noopener">
+    Paper Link</a>
+
+
+    </div>
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+  
+
+  
+
+  
+<nav class="mt-1">
+  <ul class="pagination justify-content-center">
+    
+    
+    <li class="page-item"><a class="page-link" href="/zh/publication-type/1/page/2/">&raquo;</a></li>
+    
+  </ul>
+</nav>
+
+
+</div>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <p class="powered-by copyright-license-text">
+    Copyright © 2019 - 2023 System and Software Security Lab @ XMU
+  </p>
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      由<a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>支持发布——免费<a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">开源</a>网站，为创作者赋能。
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.32ee83730ed883becad04bc5170512cc.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/zh/js/wowchemy.min.0da3fd7a93c07d11d5561e9713f84757.js"></script>
+
+
+
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">引用</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> 复制
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> 下载
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

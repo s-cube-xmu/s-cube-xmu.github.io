@@ -1,25 +1,92 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ying Wang | System and Software Security Group</title><link>https://s-cube-xmu.github.io/author/ying-wang/</link><atom:link href="https://s-cube-xmu.github.io/author/ying-wang/index.xml" rel="self" type="application/rss+xml"/><description>Ying Wang</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jul 2022 00:00:00 +0000</lastBuildDate><image><url>https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png</url><title>Ying Wang</title><link>https://s-cube-xmu.github.io/author/ying-wang/</link></image><item><title>Will Dependency Conflicts Affect My Program's Semantics?</title><link>https://s-cube-xmu.github.io/publication/will-dependency-conflicts-affect-my-programs-semantics-2021/</link><pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/will-dependency-conflicts-affect-my-programs-semantics-2021/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Watchman: Monitoring Dependency Conflicts for Python Library Ecosystem</title><link>https://s-cube-xmu.github.io/publication/watchman/</link><pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/watchman/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Could I Have a Stack Trace to Examine the Dependency Conflict Issue?</title><link>https://s-cube-xmu.github.io/publication/could-i-have-2019/</link><pubDate>Sat, 25 May 2019 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/could-i-have-2019/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Do the Dependency Conflicts in My Project Matter?</title><link>https://s-cube-xmu.github.io/publication/do-the-dep-2018/</link><pubDate>Sun, 04 Nov 2018 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/do-the-dep-2018/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ying Wang | System and Software Security Group</title>
+    <link>https://s-cube-xmu.github.io/author/ying-wang/</link>
+      <atom:link href="https://s-cube-xmu.github.io/author/ying-wang/index.xml" rel="self" type="application/rss+xml" />
+    <description>Ying Wang</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png</url>
+      <title>Ying Wang</title>
+      <link>https://s-cube-xmu.github.io/author/ying-wang/</link>
+    </image>
+    
+    <item>
+      <title>Will Dependency Conflicts Affect My Program&#39;s Semantics?</title>
+      <link>https://s-cube-xmu.github.io/publication/will-dependency-conflicts-affect-my-programs-semantics-2021/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/will-dependency-conflicts-affect-my-programs-semantics-2021/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Watchman: Monitoring Dependency Conflicts for Python Library Ecosystem</title>
+      <link>https://s-cube-xmu.github.io/publication/watchman/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/watchman/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Could I Have a Stack Trace to Examine the Dependency Conflict Issue?</title>
+      <link>https://s-cube-xmu.github.io/publication/could-i-have-2019/</link>
+      <pubDate>Sat, 25 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/could-i-have-2019/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Do the Dependency Conflicts in My Project Matter?</title>
+      <link>https://s-cube-xmu.github.io/publication/do-the-dep-2018/</link>
+      <pubDate>Sun, 04 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/do-the-dep-2018/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

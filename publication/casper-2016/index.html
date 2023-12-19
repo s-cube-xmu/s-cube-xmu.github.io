@@ -1,10 +1,1289 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=generator content="Wowchemy 5.7.0 for Hugo"><link rel=stylesheet href=/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css media=print onload='this.media="all"'><link rel=stylesheet href=/css/wowchemy.312fa478a18a798c9270bab324760a16.css><link rel=stylesheet href=/css/libs/chroma/github-light.min.css title=hl-light media=print onload='this.media="all"'><link rel=stylesheet href=/css/libs/chroma/dracula.min.css title=hl-dark media=print onload='this.media="all"' disabled><meta name=description content="Call traces, i.e., sequences of function calls and returns, are fundamental to a wide range of program analyses such as bug reproduction, fault diagnosis, performance analysis, and many others. The conventional approach to collect call traces that instruments each function call and return site incurs large space and time overhead. Our approach aims at reducing the recording overheads by instrumenting only a small amount of call sites while keeping the capability of recovering the full trace. We propose a call trace model and a logged call trace model based on an LL(1) grammar, which enables us to define the criteria of a feasible solution to call trace collection. Based on the two models, we prove that to collect call traces with minimal instrumentation is an NP-hard problem. We then propose an efficient approach to obtaining a suboptimal solution. We implemented our approach as a tool Casper and evaluated it using the DaCapo benchmark suite. The experiment results show that our approach causes significantly lower runtime (and space) overhead than two state-of-the-arts approaches."><link rel=alternate hreflang=zh href=https://s-cube-xmu.github.io/zh/publication/casper-2016/><link rel=alternate hreflang=en-us href=https://s-cube-xmu.github.io/publication/casper-2016/><link rel=canonical href=https://s-cube-xmu.github.io/publication/casper-2016/><link rel=manifest href=/manifest.webmanifest><link rel=icon type=image/png href=/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_32x32_fill_lanczos_center_3.png><link rel=apple-touch-icon type=image/png href=/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_180x180_fill_lanczos_center_3.png><meta name=theme-color content="#1565c0"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png"><meta property="og:site_name" content="System and Software Security Group"><meta property="og:url" content="https://s-cube-xmu.github.io/publication/casper-2016/"><meta property="og:title" content="Casper: an efficient approach to call trace collection | System and Software Security Group"><meta property="og:description" content="Call traces, i.e., sequences of function calls and returns, are fundamental to a wide range of program analyses such as bug reproduction, fault diagnosis, performance analysis, and many others. The conventional approach to collect call traces that instruments each function call and return site incurs large space and time overhead. Our approach aims at reducing the recording overheads by instrumenting only a small amount of call sites while keeping the capability of recovering the full trace. We propose a call trace model and a logged call trace model based on an LL(1) grammar, which enables us to define the criteria of a feasible solution to call trace collection. Based on the two models, we prove that to collect call traces with minimal instrumentation is an NP-hard problem. We then propose an efficient approach to obtaining a suboptimal solution. We implemented our approach as a tool Casper and evaluated it using the DaCapo benchmark suite. The experiment results show that our approach causes significantly lower runtime (and space) overhead than two state-of-the-arts approaches."><meta property="og:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us"><meta property="article:published_time" content="2016-01-11T00:00:00+00:00"><meta property="article:modified_time" content="2016-01-11T00:00:00+00:00"><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://s-cube-xmu.github.io/publication/casper-2016/"},"headline":"Casper: an efficient approach to call trace collection","datePublished":"2016-01-11T00:00:00Z","dateModified":"2016-01-11T00:00:00Z","author":{"@type":"Person","name":"Rongxin Wu"},"publisher":{"@type":"Organization","name":"System and Software Security Group","logo":{"@type":"ImageObject","url":"https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_192x192_fill_lanczos_center_3.png"}},"description":"Call traces, i.e., sequences of function calls and returns, are fundamental to a wide range of program analyses such as bug reproduction, fault diagnosis, performance analysis, and many others. The conventional approach to collect call traces that instruments each function call and return site incurs large space and time overhead. Our approach aims at reducing the recording overheads by instrumenting only a small amount of call sites while keeping the capability of recovering the full trace. We propose a call trace model and a logged call trace model based on an LL(1) grammar, which enables us to define the criteria of a feasible solution to call trace collection. Based on the two models, we prove that to collect call traces with minimal instrumentation is an NP-hard problem. We then propose an efficient approach to obtaining a suboptimal solution. We implemented our approach as a tool Casper and evaluated it using the DaCapo benchmark suite. The experiment results show that our approach causes significantly lower runtime (and space) overhead than two state-of-the-arts approaches."}</script><title>Casper: an efficient approach to call trace collection | System and Software Security Group</title></head><body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=1b594f6e0e7c2a563bf0bb5cf7d1cdf0><script src=/js/wowchemy-init.min.fe8634e7d00f14d07fb33caf14cc8e55.js></script><div class="page-header header--fixed"><header><nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main><div class=container-xl><div class="d-none d-lg-inline-flex"><a class=navbar-brand href=/>System and Software Security Group</a></div><button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar-content aria-expanded=false aria-label="Toggle navigation">
-<span><i class="fas fa-bars"></i></span></button><div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none"><a class=navbar-brand href=/>System and Software Security Group</a></div><div class="navbar-collapse main-menu-item collapse justify-content-end" id=navbar-content><ul class="navbar-nav d-md-inline-flex"><li class=nav-item><a class=nav-link href=/post><span>News</span></a></li><li class=nav-item><a class=nav-link href=/people><span>People</span></a></li><li class=nav-item><a class=nav-link href=/publication><span>Publications</span></a></li><li class=nav-item><a class=nav-link href=/contact><span>Contact</span></a></li></ul></div><ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2"><li class="nav-item dropdown i18n-dropdown"><a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label=Languages><i class="fas fa-globe mr-1" aria-hidden=true></i></a><div class=dropdown-menu><div class="dropdown-item dropdown-item-active"><span>English</span></div><a class=dropdown-item href=https://s-cube-xmu.github.io/zh/publication/casper-2016/><span>中文 (简体)</span></a></div></li></ul></div></nav></header></div><div class=page-body><div class=pub><div class="article-container pt-3"><h1>Casper: an efficient approach to call trace collection</h1><div class=article-metadata><div><span><a href=/author/rongxin-wu/>Rongxin Wu</a></span>, <span><a href=/author/xiao-xiao/>Xiao Xiao</a></span>, <span><a href=/author/shing-chi-cheung/>Shing-Chi Cheung</a></span>, <span><a href=/author/hongyu-zhang/>Hongyu Zhang</a></span>, <span><a href=/author/charles-zhang/>Charles Zhang</a></span></div><span class=article-date>January, 2016</span></div><div class="btn-links mb-3"><a class="btn btn-outline-primary btn-page-header" href=/uploads/Casper.pdf target=_blank rel=noopener>PDF</a>
-<a href=# class="btn btn-outline-primary btn-page-header js-cite-modal" data-filename=/publication/casper-2016/cite.bib>Cite</a>
-<a class="btn btn-outline-primary btn-page-header" href=https://dl.acm.org/doi/abs/10.1145/2914770.2837619 target=_blank rel=noopener>Paper Link</a></div></div><div class=article-container><h3>Abstract</h3><p class=pub-abstract>Call traces, i.e., sequences of function calls and returns, are fundamental to a wide range of program analyses such as bug reproduction, fault diagnosis, performance analysis, and many others. The conventional approach to collect call traces that instruments each function call and return site incurs large space and time overhead. Our approach aims at reducing the recording overheads by instrumenting only a small amount of call sites while keeping the capability of recovering the full trace. We propose a call trace model and a logged call trace model based on an LL(1) grammar, which enables us to define the criteria of a feasible solution to call trace collection. Based on the two models, we prove that to collect call traces with minimal instrumentation is an NP-hard problem. We then propose an efficient approach to obtaining a suboptimal solution. We implemented our approach as a tool Casper and evaluated it using the DaCapo benchmark suite. The experiment results show that our approach causes significantly lower runtime (and space) overhead than two state-of-the-arts approaches.</p><div class=row><div class=col-md-1></div><div class=col-md-10><div class=row><div class="col-12 col-md-3 pub-row-heading">Type</div><div class="col-12 col-md-9"><a href=/publication/#1>Conference paper</a></div></div></div><div class=col-md-1></div></div><div class="d-md-none space-below"></div><div class=row><div class=col-md-1></div><div class=col-md-10><div class=row><div class="col-12 col-md-3 pub-row-heading">Publication</div><div class="col-12 col-md-9">In <em>ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages</em></div></div></div><div class=col-md-1></div></div><div class="d-md-none space-below"></div><div class=space-below></div><div class=article-style></div><div class=article-tags><a class="badge badge-light" href=/tag/call-trace/>Call Trace</a>
-<a class="badge badge-light" href=/tag/instrumentation/>Instrumentation</a>
-<a class="badge badge-light" href=/tag/overhead/>Overhead</a></div><div class=share-box><ul class=share><li><a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fpublication%2Fcasper-2016%2F&amp;text=Casper%3A+an+efficient+approach+to+call+trace+collection" target=_blank rel=noopener class=share-btn-twitter aria-label=twitter><i class="fab fa-twitter"></i></a></li><li><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fs-cube-xmu.github.io%2Fpublication%2Fcasper-2016%2F&amp;t=Casper%3A+an+efficient+approach+to+call+trace+collection" target=_blank rel=noopener class=share-btn-facebook aria-label=facebook><i class="fab fa-facebook"></i></a></li><li><a href="mailto:?subject=Casper%3A%20an%20efficient%20approach%20to%20call%20trace%20collection&amp;body=https%3A%2F%2Fs-cube-xmu.github.io%2Fpublication%2Fcasper-2016%2F" target=_blank rel=noopener class=share-btn-email aria-label=envelope><i class="fas fa-envelope"></i></a></li><li><a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fpublication%2Fcasper-2016%2F&amp;title=Casper%3A+an+efficient+approach+to+call+trace+collection" target=_blank rel=noopener class=share-btn-linkedin aria-label=linkedin-in><i class="fab fa-linkedin-in"></i></a></li><li><a href="whatsapp://send?text=Casper%3A+an+efficient+approach+to+call+trace+collection%20https%3A%2F%2Fs-cube-xmu.github.io%2Fpublication%2Fcasper-2016%2F" target=_blank rel=noopener class=share-btn-whatsapp aria-label=whatsapp><i class="fab fa-whatsapp"></i></a></li><li><a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fpublication%2Fcasper-2016%2F&amp;title=Casper%3A+an+efficient+approach+to+call+trace+collection" target=_blank rel=noopener class=share-btn-weibo aria-label=weibo><i class="fab fa-weibo"></i></a></li></ul></div><div class="media author-card content-widget-hr"><a href=/author/rongxin-wu/><img class="avatar mr-3 avatar-circle" src=/author/rongxin-wu/avatar_huf7c9122e5773de1d13e663a0e72820b9_7187061_270x270_fill_q75_lanczos_center.jpg alt="Rongxin Wu"></a><div class=media-body><h5 class=card-title><a href=/author/rongxin-wu/>Rongxin Wu</a></h5><h6 class=card-subtitle>Associate Professor</h6><p class=card-text>I am currently an associate professor in the department of computer science and technology at Xiamen University. My research interests include software security, program analysis, and software engineering.</p><ul class=network-icon aria-hidden=true><li><a href=/wurongxin@xmu.edu.cn><i class="fas fa-envelope"></i></a></li><li><a href="https://scholar.google.com.hk/citations?user=xdxTt38AAAAJ" target=_blank rel=noopener><i class="ai ai-google-scholar"></i></a></li><li><a href=https://wurongxin1987.github.io/wurongxin.xmu.edu.cn/ target=_blank rel=noopener><i class="fab fa-github"></i></a></li></ul></div></div></div></div></div><div class=page-footer><div class=container><footer class=site-footer><p class="powered-by copyright-license-text">Copyright © 2019 - 2023 System and Software Security Lab @ XMU</p><p class=powered-by>Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a> — the free, <a href=https://github.com/wowchemy/wowchemy-hugo-themes target=_blank rel=noopener>open source</a> website builder that empowers creators.</p></footer></div></div><script src=/js/vendor-bundle.min.32ee83730ed883becad04bc5170512cc.js></script>
-<script id=page-data type=application/json>{"use_headroom":true}</script><script src=/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js type=module></script>
-<script src=/en/js/wowchemy.min.4eaac1a56970bb4256d509035e39924f.js></script><div id=modal class="modal fade" role=dialog><div class=modal-dialog><div class=modal-content><div class=modal-header><h5 class=modal-title>Cite</h5><button type=button class=close data-dismiss=modal aria-label=Close>
-<span aria-hidden=true>&#215;</span></button></div><div class=modal-body><pre><code></code></pre></div><div class=modal-footer><a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank><i class="fas fa-copy"></i> Copy</a>
-<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank><i class="fas fa-download"></i> Download</a><div id=modal-error></div></div></div></div></div><script src=/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js type=module></script></body></html>
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: December 19, 2023 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.312fa478a18a798c9270bab324760a16.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<meta name="description" content="Call traces, i.e., sequences of function calls and returns, are fundamental to a wide range of program analyses such as bug reproduction, fault diagnosis, performance analysis, and many others. The conventional approach to collect call traces that instruments each function call and return site incurs large space and time overhead. Our approach aims at reducing the recording overheads by instrumenting only a small amount of call sites while keeping the capability of recovering the full trace. We propose a call trace model and a logged call trace model based on an LL(1) grammar, which enables us to define the criteria of a feasible solution to call trace collection. Based on the two models, we prove that to collect call traces with minimal instrumentation is an NP-hard problem. We then propose an efficient approach to obtaining a suboptimal solution. We implemented our approach as a tool Casper and evaluated it using the DaCapo benchmark suite. The experiment results show that our approach causes significantly lower runtime (and space) overhead than two state-of-the-arts approaches." />
+
+
+
+  <link rel="alternate" hreflang="zh" href="https://s-cube-xmu.github.io/zh/publication/casper-2016/" />
+
+<link rel="alternate" hreflang="en-us" href="https://s-cube-xmu.github.io/publication/casper-2016/" />
+<link rel="canonical" href="https://s-cube-xmu.github.io/publication/casper-2016/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="System and Software Security Group" />
+<meta property="og:url" content="https://s-cube-xmu.github.io/publication/casper-2016/" />
+<meta property="og:title" content="Casper: an efficient approach to call trace collection | System and Software Security Group" />
+<meta property="og:description" content="Call traces, i.e., sequences of function calls and returns, are fundamental to a wide range of program analyses such as bug reproduction, fault diagnosis, performance analysis, and many others. The conventional approach to collect call traces that instruments each function call and return site incurs large space and time overhead. Our approach aims at reducing the recording overheads by instrumenting only a small amount of call sites while keeping the capability of recovering the full trace. We propose a call trace model and a logged call trace model based on an LL(1) grammar, which enables us to define the criteria of a feasible solution to call trace collection. Based on the two models, we prove that to collect call traces with minimal instrumentation is an NP-hard problem. We then propose an efficient approach to obtaining a suboptimal solution. We implemented our approach as a tool Casper and evaluated it using the DaCapo benchmark suite. The experiment results show that our approach causes significantly lower runtime (and space) overhead than two state-of-the-arts approaches." /><meta property="og:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2016-01-11T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2016-01-11T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://s-cube-xmu.github.io/publication/casper-2016/"
+  },
+  "headline": "Casper: an efficient approach to call trace collection",
+  
+  "datePublished": "2016-01-11T00:00:00Z",
+  "dateModified": "2016-01-11T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Rongxin Wu"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "System and Software Security Group",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Call traces, i.e., sequences of function calls and returns, are fundamental to a wide range of program analyses such as bug reproduction, fault diagnosis, performance analysis, and many others. The conventional approach to collect call traces that instruments each function call and return site incurs large space and time overhead. Our approach aims at reducing the recording overheads by instrumenting only a small amount of call sites while keeping the capability of recovering the full trace. We propose a call trace model and a logged call trace model based on an LL(1) grammar, which enables us to define the criteria of a feasible solution to call trace collection. Based on the two models, we prove that to collect call traces with minimal instrumentation is an NP-hard problem. We then propose an efficient approach to obtaining a suboptimal solution. We implemented our approach as a tool Casper and evaluated it using the DaCapo benchmark suite. The experiment results show that our approach causes significantly lower runtime (and space) overhead than two state-of-the-arts approaches."
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Casper: an efficient approach to call trace collection | System and Software Security Group</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="1b594f6e0e7c2a563bf0bb5cf7d1cdf0" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.fe8634e7d00f14d07fb33caf14cc8e55.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">System and Software Security Group</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">System and Software Security Group</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/post"><span>News</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/people"><span>People</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/publication"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        <li class="nav-item dropdown i18n-dropdown">
+          <a href="#" class="nav-link " data-toggle="dropdown"
+             aria-haspopup="true" aria-label="Languages">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item dropdown-item-active">
+              <span>English</span>
+            </div>
+            
+            <a class="dropdown-item" href="https://s-cube-xmu.github.io/zh/publication/casper-2016/">
+              <span>中文 (简体)</span>
+            </a>
+            
+          </div>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+
+
+
+
+
+<div class="pub">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Casper: an efficient approach to call trace collection</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      <a href="/author/rongxin-wu/">Rongxin Wu</a></span>, <span >
+      <a href="/author/xiao-xiao/">Xiao Xiao</a></span>, <span >
+      <a href="/author/shing-chi-cheung/">Shing-Chi Cheung</a></span>, <span >
+      <a href="/author/hongyu-zhang/">Hongyu Zhang</a></span>, <span >
+      <a href="/author/charles-zhang/">Charles Zhang</a></span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    January, 2016
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header" href="/uploads/Casper.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header js-cite-modal"
+        data-filename="/publication/casper-2016/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header" href="https://dl.acm.org/doi/abs/10.1145/2914770.2837619" target="_blank" rel="noopener">
+    Paper Link</a>
+
+
+</div>
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    
+    <h3>Abstract</h3>
+    <p class="pub-abstract">Call traces, i.e., sequences of function calls and returns, are fundamental to a wide range of program analyses such as bug reproduction, fault diagnosis, performance analysis, and many others. The conventional approach to collect call traces that instruments each function call and return site incurs large space and time overhead. Our approach aims at reducing the recording overheads by instrumenting only a small amount of call sites while keeping the capability of recovering the full trace. We propose a call trace model and a logged call trace model based on an LL(1) grammar, which enables us to define the criteria of a feasible solution to call trace collection. Based on the two models, we prove that to collect call traces with minimal instrumentation is an NP-hard problem. We then propose an efficient approach to obtaining a suboptimal solution. We implemented our approach as a tool Casper and evaluated it using the DaCapo benchmark suite. The experiment results show that our approach causes significantly lower runtime (and space) overhead than two state-of-the-arts approaches.</p>
+    
+
+    
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Type</div>
+          <div class="col-12 col-md-9">
+            <a href="/publication/#1">
+              Conference paper
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Publication</div>
+          <div class="col-12 col-md-9">In <em>ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages</em></div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style"><!-- 
+
+
+<div class="alert alert-note">
+  <div>
+    Click the <em>Cite</em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  </div>
+</div>
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). -->
+</div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/call-trace/">Call Trace</a>
+  
+  <a class="badge badge-light" href="/tag/instrumentation/">Instrumentation</a>
+  
+  <a class="badge badge-light" href="/tag/overhead/">Overhead</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fpublication%2Fcasper-2016%2F&amp;text=Casper%3A&#43;an&#43;efficient&#43;approach&#43;to&#43;call&#43;trace&#43;collection" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fs-cube-xmu.github.io%2Fpublication%2Fcasper-2016%2F&amp;t=Casper%3A&#43;an&#43;efficient&#43;approach&#43;to&#43;call&#43;trace&#43;collection" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=Casper%3A%20an%20efficient%20approach%20to%20call%20trace%20collection&amp;body=https%3A%2F%2Fs-cube-xmu.github.io%2Fpublication%2Fcasper-2016%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fpublication%2Fcasper-2016%2F&amp;title=Casper%3A&#43;an&#43;efficient&#43;approach&#43;to&#43;call&#43;trace&#43;collection" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Casper%3A&#43;an&#43;efficient&#43;approach&#43;to&#43;call&#43;trace&#43;collection%20https%3A%2F%2Fs-cube-xmu.github.io%2Fpublication%2Fcasper-2016%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fpublication%2Fcasper-2016%2F&amp;title=Casper%3A&#43;an&#43;efficient&#43;approach&#43;to&#43;call&#43;trace&#43;collection" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="/author/rongxin-wu/"><img class="avatar mr-3 avatar-circle" src="/author/rongxin-wu/avatar_huf7c9122e5773de1d13e663a0e72820b9_7187061_270x270_fill_q75_lanczos_center.jpg" alt="Rongxin Wu"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/author/rongxin-wu/">Rongxin Wu</a></h5>
+      <h6 class="card-subtitle">Associate Professor</h6>
+      <p class="card-text">I am currently an associate professor in the department of computer science and technology at Xiamen University. My research interests include software security, program analysis, and software engineering.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/wurongxin@xmu.edu.cn" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com.hk/citations?user=xdxTt38AAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://wurongxin1987.github.io/wurongxin.xmu.edu.cn/" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <p class="powered-by copyright-license-text">
+    Copyright © 2019 - 2023 System and Software Security Lab @ XMU
+  </p>
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.32ee83730ed883becad04bc5170512cc.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.4eaac1a56970bb4256d509035e39924f.js"></script>
+
+
+
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

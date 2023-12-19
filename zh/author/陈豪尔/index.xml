@@ -1,1 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>陈豪尔 | 系统与软件安全实验室</title><link>https://s-cube-xmu.github.io/zh/author/%E9%99%88%E8%B1%AA%E5%B0%94/</link><atom:link href="https://s-cube-xmu.github.io/zh/author/%E9%99%88%E8%B1%AA%E5%B0%94/index.xml" rel="self" type="application/rss+xml"/><description>陈豪尔</description><generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><image><url>https://s-cube-xmu.github.io/zh/author/%E9%99%88%E8%B1%AA%E5%B0%94/avatar_hu3b58d07170fa2cd0d5625c6ed513bdfb_4912_270x270_fill_q75_lanczos_center.jpg</url><title>陈豪尔</title><link>https://s-cube-xmu.github.io/zh/author/%E9%99%88%E8%B1%AA%E5%B0%94/</link></image></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>陈豪尔 | 系统与软件安全实验室</title>
+    <link>https://s-cube-xmu.github.io/zh/author/%E9%99%88%E8%B1%AA%E5%B0%94/</link>
+      <atom:link href="https://s-cube-xmu.github.io/zh/author/%E9%99%88%E8%B1%AA%E5%B0%94/index.xml" rel="self" type="application/rss+xml" />
+    <description>陈豪尔</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language>
+    <image>
+      <url>https://s-cube-xmu.github.io/zh/author/%E9%99%88%E8%B1%AA%E5%B0%94/avatar_hu3b58d07170fa2cd0d5625c6ed513bdfb_4912_270x270_fill_q75_lanczos_center.jpg</url>
+      <title>陈豪尔</title>
+      <link>https://s-cube-xmu.github.io/zh/author/%E9%99%88%E8%B1%AA%E5%B0%94/</link>
+    </image>
+    
+  </channel>
+</rss>

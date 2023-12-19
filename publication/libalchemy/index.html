@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: December 19, 2023 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.312fa478a18a798c9270bab324760a16.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<meta name="description" content="Despite the benefits of using third-party libraries (TPLs), the misuse of TPL functions raises quality and security concerns. Using traditional static analysis to detect bugs caused by TPL function misuse is non-trivial. One promising solution would be to automatically generate and persist the summaries of TPL functions offline and then reuse these summaries in compositional static analysis online. However, when dealing with millions of lines of TPL code, the summaries designed by existing studies suffer from an unresolved paradox. That is, a highly precise form of summary leads to an unaffordable space and time overhead, while an imprecise one seriously hurts its precision or recall. To address the paradox, we propose a novel two-layer summary design. The first layer utilizes a line-sized program representation known as the program dependence graph to compactly encode path conditions, while the second layer encodes bug-specific properties. We implemented our idea as a tool called LibAlchemy and evaluated it on fifteen mature and extensively checked open-source projects. Experimental results show that LibAlchemy can check over ten million lines of code within ten hours. LibAlchemy has detected 55 true bugs with a high precision of 90.16%, six of which have been assigned CVE IDs. Compared to whole-program analysis and the conventional design of path-sensitively precise summaries, LibAlchemy achieves an 18.56× and 12.77× speedup and saves 91.49% and 90.51% of memory usage, respectively." />
+
+
+
+  <link rel="alternate" hreflang="zh" href="https://s-cube-xmu.github.io/zh/publication/libalchemy/" />
+
+<link rel="alternate" hreflang="en-us" href="https://s-cube-xmu.github.io/publication/libalchemy/" />
+<link rel="canonical" href="https://s-cube-xmu.github.io/publication/libalchemy/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="System and Software Security Group" />
+<meta property="og:url" content="https://s-cube-xmu.github.io/publication/libalchemy/" />
+<meta property="og:title" content="LibAlchemy: A Two-Layer Persistent Summary Design for Taming Third-Party Libraries in Static Bug-Finding Systems | System and Software Security Group" />
+<meta property="og:description" content="Despite the benefits of using third-party libraries (TPLs), the misuse of TPL functions raises quality and security concerns. Using traditional static analysis to detect bugs caused by TPL function misuse is non-trivial. One promising solution would be to automatically generate and persist the summaries of TPL functions offline and then reuse these summaries in compositional static analysis online. However, when dealing with millions of lines of TPL code, the summaries designed by existing studies suffer from an unresolved paradox. That is, a highly precise form of summary leads to an unaffordable space and time overhead, while an imprecise one seriously hurts its precision or recall. To address the paradox, we propose a novel two-layer summary design. The first layer utilizes a line-sized program representation known as the program dependence graph to compactly encode path conditions, while the second layer encodes bug-specific properties. We implemented our idea as a tool called LibAlchemy and evaluated it on fifteen mature and extensively checked open-source projects. Experimental results show that LibAlchemy can check over ten million lines of code within ten hours. LibAlchemy has detected 55 true bugs with a high precision of 90.16%, six of which have been assigned CVE IDs. Compared to whole-program analysis and the conventional design of path-sensitively precise summaries, LibAlchemy achieves an 18.56× and 12.77× speedup and saves 91.49% and 90.51% of memory usage, respectively." /><meta property="og:image" content="https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2024-04-14T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2024-04-14T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://s-cube-xmu.github.io/publication/libalchemy/"
+  },
+  "headline": "LibAlchemy: A Two-Layer Persistent Summary Design for Taming Third-Party Libraries in Static Bug-Finding Systems",
+  
+  "datePublished": "2024-04-14T00:00:00Z",
+  "dateModified": "2024-04-14T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Rongxin Wu"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "System and Software Security Group",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Despite the benefits of using third-party libraries (TPLs), the misuse of TPL functions raises quality and security concerns. Using traditional static analysis to detect bugs caused by TPL function misuse is non-trivial. One promising solution would be to automatically generate and persist the summaries of TPL functions offline and then reuse these summaries in compositional static analysis online. However, when dealing with millions of lines of TPL code, the summaries designed by existing studies suffer from an unresolved paradox. That is, a highly precise form of summary leads to an unaffordable space and time overhead, while an imprecise one seriously hurts its precision or recall. To address the paradox, we propose a novel two-layer summary design. The first layer utilizes a line-sized program representation known as the program dependence graph to compactly encode path conditions, while the second layer encodes bug-specific properties. We implemented our idea as a tool called LibAlchemy and evaluated it on fifteen mature and extensively checked open-source projects. Experimental results show that LibAlchemy can check over ten million lines of code within ten hours. LibAlchemy has detected 55 true bugs with a high precision of 90.16%, six of which have been assigned CVE IDs. Compared to whole-program analysis and the conventional design of path-sensitively precise summaries, LibAlchemy achieves an 18.56× and 12.77× speedup and saves 91.49% and 90.51% of memory usage, respectively."
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>LibAlchemy: A Two-Layer Persistent Summary Design for Taming Third-Party Libraries in Static Bug-Finding Systems | System and Software Security Group</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="b941e0d94d8a75e0ae9513ae6877a4dc" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.fe8634e7d00f14d07fb33caf14cc8e55.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">System and Software Security Group</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">System and Software Security Group</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/post"><span>News</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/people"><span>People</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/publication"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+        <li class="nav-item dropdown i18n-dropdown">
+          <a href="#" class="nav-link " data-toggle="dropdown"
+             aria-haspopup="true" aria-label="Languages">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item dropdown-item-active">
+              <span>English</span>
+            </div>
+            
+            <a class="dropdown-item" href="https://s-cube-xmu.github.io/zh/publication/libalchemy/">
+              <span>中文 (简体)</span>
+            </a>
+            
+          </div>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+
+
+
+
+
+<div class="pub">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>LibAlchemy: A Two-Layer Persistent Summary Design for Taming Third-Party Libraries in Static Bug-Finding Systems</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      <a href="/author/rongxin-wu/">Rongxin Wu</a></span>, <span >
+      <a href="/author/yuxuan-he/">Yuxuan He</a></span>, <span >
+      <a href="/author/jiafeng-huang/">Jiafeng Huang</a></span>, <span >
+      <a href="/author/chengpeng-wang/">Chengpeng Wang</a></span>, <span >
+      <a href="/author/wensheng-tang/">Wensheng Tang</a></span>, <span >
+      <a href="/author/qingkai-shi/">Qingkai Shi</a></span>, <span >
+      <a href="/author/xiao-xiao/">Xiao Xiao</a></span>, <span >
+      <a href="/author/charles-zhang/">Charles Zhang</a></span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    April, 2024
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    
+    <h3>Abstract</h3>
+    <p class="pub-abstract">Despite the benefits of using third-party libraries (TPLs), the misuse of TPL functions raises quality and security concerns. Using traditional static analysis to detect bugs caused by TPL function misuse is non-trivial. One promising solution would be to automatically generate and persist the summaries of TPL functions offline and then reuse these summaries in compositional static analysis online. However, when dealing with millions of lines of TPL code, the summaries designed by existing studies suffer from an unresolved paradox. That is, a highly precise form of summary leads to an unaffordable space and time overhead, while an imprecise one seriously hurts its precision or recall. To address the paradox, we propose a novel two-layer summary design. The first layer utilizes a line-sized program representation known as the program dependence graph to compactly encode path conditions, while the second layer encodes bug-specific properties. We implemented our idea as a tool called LibAlchemy and evaluated it on fifteen mature and extensively checked open-source projects. Experimental results show that LibAlchemy can check over ten million lines of code within ten hours. LibAlchemy has detected 55 true bugs with a high precision of 90.16%, six of which have been assigned CVE IDs. Compared to whole-program analysis and the conventional design of path-sensitively precise summaries, LibAlchemy achieves an 18.56× and 12.77× speedup and saves 91.49% and 90.51% of memory usage, respectively.</p>
+    
+
+    
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Type</div>
+          <div class="col-12 col-md-9">
+            <a href="/publication/#1">
+              Conference paper
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Publication</div>
+          <div class="col-12 col-md-9">In <em>International Conference on Software Engineering</em></div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style"><!-- 
+
+
+<div class="alert alert-note">
+  <div>
+    Click the <em>Cite</em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  </div>
+</div>
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). -->
+</div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/program-summary/">program summary</a>
+  
+  <a class="badge badge-light" href="/tag/static-bug-finding/">Static bug finding</a>
+  
+  <a class="badge badge-light" href="/tag/third-party-library/">Third-party library</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fpublication%2Flibalchemy%2F&amp;text=LibAlchemy%3A&#43;A&#43;Two-Layer&#43;Persistent&#43;Summary&#43;Design&#43;for&#43;Taming&#43;Third-Party&#43;Libraries&#43;in&#43;Static&#43;Bug-Finding&#43;Systems" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fs-cube-xmu.github.io%2Fpublication%2Flibalchemy%2F&amp;t=LibAlchemy%3A&#43;A&#43;Two-Layer&#43;Persistent&#43;Summary&#43;Design&#43;for&#43;Taming&#43;Third-Party&#43;Libraries&#43;in&#43;Static&#43;Bug-Finding&#43;Systems" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=LibAlchemy%3A%20A%20Two-Layer%20Persistent%20Summary%20Design%20for%20Taming%20Third-Party%20Libraries%20in%20Static%20Bug-Finding%20Systems&amp;body=https%3A%2F%2Fs-cube-xmu.github.io%2Fpublication%2Flibalchemy%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fpublication%2Flibalchemy%2F&amp;title=LibAlchemy%3A&#43;A&#43;Two-Layer&#43;Persistent&#43;Summary&#43;Design&#43;for&#43;Taming&#43;Third-Party&#43;Libraries&#43;in&#43;Static&#43;Bug-Finding&#43;Systems" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=LibAlchemy%3A&#43;A&#43;Two-Layer&#43;Persistent&#43;Summary&#43;Design&#43;for&#43;Taming&#43;Third-Party&#43;Libraries&#43;in&#43;Static&#43;Bug-Finding&#43;Systems%20https%3A%2F%2Fs-cube-xmu.github.io%2Fpublication%2Flibalchemy%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fs-cube-xmu.github.io%2Fpublication%2Flibalchemy%2F&amp;title=LibAlchemy%3A&#43;A&#43;Two-Layer&#43;Persistent&#43;Summary&#43;Design&#43;for&#43;Taming&#43;Third-Party&#43;Libraries&#43;in&#43;Static&#43;Bug-Finding&#43;Systems" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="/author/rongxin-wu/"><img class="avatar mr-3 avatar-circle" src="/author/rongxin-wu/avatar_huf7c9122e5773de1d13e663a0e72820b9_7187061_270x270_fill_q75_lanczos_center.jpg" alt="Rongxin Wu"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/author/rongxin-wu/">Rongxin Wu</a></h5>
+      <h6 class="card-subtitle">Associate Professor</h6>
+      <p class="card-text">I am currently an associate professor in the department of computer science and technology at Xiamen University. My research interests include software security, program analysis, and software engineering.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/wurongxin@xmu.edu.cn" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com.hk/citations?user=xdxTt38AAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://wurongxin1987.github.io/wurongxin.xmu.edu.cn/" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+    
+
+
+
+  
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="/author/yuxuan-he/"><img class="avatar mr-3 avatar-circle" src="/author/yuxuan-he/avatar_hu1a92e8e6f093e7a2df673e35ce0ff0d5_127290_270x270_fill_q75_lanczos_center.jpg" alt="Yuxuan He"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/author/yuxuan-he/">Yuxuan He</a></h5>
+      <h6 class="card-subtitle">MSc, 2021&ndash;</h6>
+      <p class="card-text">My research interests include vulnerability detection and pointer analysis.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:yuxuanhe@stu.xmu.edu.cn" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/" >
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/hyx1005" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+    
+
+
+
+  
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="/author/jiafeng-huang/"><img class="avatar mr-3 avatar-circle" src="/author/jiafeng-huang/avatar_hu84e531fca3901f7df72a403961ff0b1b_496798_270x270_fill_lanczos_center_3.png" alt="Jiafeng Huang"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/author/jiafeng-huang/">Jiafeng Huang</a></h5>
+      <h6 class="card-subtitle">MSc, 2021&ndash;</h6>
+      <p class="card-text">My research interests include code cloning detection, third-party library vulnerability detection, and vulnerability API accessibility analysis.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:thghjf@stu.xmu.edu.cn" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/" >
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/thghxf123" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <p class="powered-by copyright-license-text">
+    Copyright © 2019 - 2023 System and Software Security Lab @ XMU
+  </p>
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.32ee83730ed883becad04bc5170512cc.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.4eaac1a56970bb4256d509035e39924f.js"></script>
+
+
+
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

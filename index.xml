@@ -1,249 +1,837 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>System and Software Security Group</title><link>https://s-cube-xmu.github.io/</link><atom:link href="https://s-cube-xmu.github.io/index.xml" rel="self" type="application/rss+xml"/><description>System and Software Security Group</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate><image><url>https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png</url><title>System and Software Security Group</title><link>https://s-cube-xmu.github.io/</link></image><item><title>Example Event</title><link>https://s-cube-xmu.github.io/event/example/</link><pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/event/example/</guid><description>&lt;p>Slides can be added in a few ways:&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Create&lt;/strong> slides using Wowchemy&amp;rsquo;s &lt;a href="https://wowchemy.com/docs/managing-content/#create-slides" target="_blank" rel="noopener">&lt;em>Slides&lt;/em>&lt;/a> feature and link using &lt;code>slides&lt;/code> parameter in the front matter of the talk file&lt;/li>
-&lt;li>&lt;strong>Upload&lt;/strong> an existing slide deck to &lt;code>static/&lt;/code> and link using &lt;code>url_slides&lt;/code> parameter in the front matter of the talk file&lt;/li>
-&lt;li>&lt;strong>Embed&lt;/strong> your slides (e.g. Google Slides) or presentation video on this page using &lt;a href="https://wowchemy.com/docs/writing-markdown-latex/" target="_blank" rel="noopener">shortcodes&lt;/a>.&lt;/li>
-&lt;/ul>
-&lt;p>Further event details, including page elements such as image galleries, can be added to the body of this page.&lt;/p></description></item><item><title>Our third-party library related bug detection work has been accepted by ICSE 2024</title><link>https://s-cube-xmu.github.io/post/libalchemy_icse24/</link><pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/post/libalchemy_icse24/</guid><description>&lt;p>Our database logical bugs detection work has been accepted by ICSE 2024.&lt;/p>
-&lt;ul class="cta-group">
-&lt;li>
-&lt;a href="https://s-cube-xmu.github.io/publication/" class="btn btn-primary px-3 py-3">Details of publications →&lt;/a>
-&lt;/li>
-&lt;/ul></description></item><item><title>Contact</title><link>https://s-cube-xmu.github.io/contact/</link><pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/contact/</guid><description/></item><item><title>Pinolo: Detecting Logical Bugs in Database Management Systems with Approximate Query Synthesis</title><link>https://s-cube-xmu.github.io/publication/pinolo/</link><pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/pinolo/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Our database logical bugs detection work has been accepted by ATC 2023</title><link>https://s-cube-xmu.github.io/post/atc2023/</link><pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/post/atc2023/</guid><description>&lt;p>Our database logical bugs detection work has been accepted by &lt;a href="https://www.usenix.org/conference/atc23/presentation/hao" target="_blank" rel="noopener">ATC 2023&lt;/a>.&lt;/p>
-&lt;ul class="cta-group">
-&lt;li>
-&lt;a href="https://s-cube-xmu.github.io/publication/" class="btn btn-primary px-3 py-3">Details of publications →&lt;/a>
-&lt;/li>
-&lt;/ul></description></item><item><title>Detecting JVM JIT Compiler Bugs via Exploring Two-Dimensional Input Spaces</title><link>https://s-cube-xmu.github.io/publication/detecting-jvm-jit-compiler-bugs-2023/</link><pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/detecting-jvm-jit-compiler-bugs-2023/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Improving Java Deserialization Gadget Chain Mining via Overriding-Guided Object Generation</title><link>https://s-cube-xmu.github.io/publication/improving-java-deserialization-gadget-chain-mining-2023/</link><pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/improving-java-deserialization-gadget-chain-mining-2023/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Our accelerating build script error detection work has been accepted by ASE 2022</title><link>https://s-cube-xmu.github.io/post/virtualbuild2022/</link><pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/post/virtualbuild2022/</guid><description>&lt;p>Our accelerating build script error detection work has been accepted by &lt;a href="https://dl.acm.org/doi/10.1145/3551349.3556930" target="_blank" rel="noopener">ASE 2022&lt;/a>.&lt;/p>
-&lt;ul class="cta-group">
-&lt;li>
-&lt;a href="https://s-cube-xmu.github.io/publication/" class="btn btn-primary px-3 py-3">Details of publications →&lt;/a>
-&lt;/li>
-&lt;/ul></description></item><item><title>Our python ecosystem management work has been accepted by ASE 2022</title><link>https://s-cube-xmu.github.io/post/smartpip2022/</link><pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/post/smartpip2022/</guid><description>&lt;p>Our database logical bugs detection work has been accepted by &lt;a href="https://dl.acm.org/doi/10.1145/3551349.3560437" target="_blank" rel="noopener">ASE 2022&lt;/a>.&lt;/p>
-&lt;ul class="cta-group">
-&lt;li>
-&lt;a href="https://s-cube-xmu.github.io/publication/" class="btn btn-primary px-3 py-3">Details of publications →&lt;/a>
-&lt;/li>
-&lt;/ul></description></item><item><title>People</title><link>https://s-cube-xmu.github.io/people/</link><pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/people/</guid><description/></item><item><title>Tour</title><link>https://s-cube-xmu.github.io/tour/</link><pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/tour/</guid><description/></item><item><title>Accelerating Build Dependency Error Detection via Virtual Build</title><link>https://s-cube-xmu.github.io/publication/virtualbuild/</link><pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/virtualbuild/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>smartPip: A Smart Approach to Resolving Python Dependency Conflict Issues</title><link>https://s-cube-xmu.github.io/publication/smartpip/</link><pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/smartpip/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Will Dependency Conflicts Affect My Program's Semantics?</title><link>https://s-cube-xmu.github.io/publication/will-dependency-conflicts-affect-my-programs-semantics-2021/</link><pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/will-dependency-conflicts-affect-my-programs-semantics-2021/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>MVD: memory-related vulnerability detection based on flow-sensitive graph neural networks</title><link>https://s-cube-xmu.github.io/publication/mvd-2022/</link><pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/mvd-2022/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>BEACON: Directed Grey-Box Fuzzing with Provable Path Pruning</title><link>https://s-cube-xmu.github.io/publication/beacon-2022/</link><pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/beacon-2022/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Targeting Requirements Violations of Autonomous Driving Systems by Dynamic Evolutionary Search</title><link>https://s-cube-xmu.github.io/publication/targetingrequirementsviolations-2021/</link><pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/targetingrequirementsviolations-2021/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Transcode: Detecting Status Code Mapping Errors in Large-Scale Systems</title><link>https://s-cube-xmu.github.io/publication/transcode-2021/</link><pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/transcode-2021/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Historical Spectrum based Fault Localization</title><link>https://s-cube-xmu.github.io/publication/historical-spectrum-based-fault-localization-2021/</link><pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/historical-spectrum-based-fault-localization-2021/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Skeletal Approximation Enumeration for SMT Solver Testing</title><link>https://s-cube-xmu.github.io/publication/sae-2021/</link><pubDate>Sat, 18 Sep 2021 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/sae-2021/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Fuzzing SMT Solvers via Two-Dimensional Input Space Exploration</title><link>https://s-cube-xmu.github.io/publication/fuzzingsmtsolver-2021/</link><pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/fuzzingsmtsolver-2021/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Path-Sensitive Sparse Analysis without Path Conditions</title><link>https://s-cube-xmu.github.io/publication/pathsensitivesparseanalyse-2021/</link><pubDate>Fri, 18 Jun 2021 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/pathsensitivesparseanalyse-2021/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Automatic Detection and Update Suggestion for Outdated API Names in Documentation</title><link>https://s-cube-xmu.github.io/publication/automatic-detection-and-update-suggestion-for-outdated-api-names-in-documentation-2019/</link><pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/automatic-detection-and-update-suggestion-for-outdated-api-names-in-documentation-2019/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Watchman: Monitoring Dependency Conflicts for Python Library Ecosystem</title><link>https://s-cube-xmu.github.io/publication/watchman/</link><pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/watchman/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Escaping Dependency Hell: Finding Build Dependency Errors with the Unified Dependency Graph</title><link>https://s-cube-xmu.github.io/publication/escapingdependencyhell-2020/</link><pubDate>Sat, 18 Jul 2020 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/escapingdependencyhell-2020/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Conquering the Extensional Scalability Problem for Value-Flow Analysis Frameworks</title><link>https://s-cube-xmu.github.io/publication/conquering-2020/</link><pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/conquering-2020/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Pangolin: Incremental Hybrid Fuzzing with Polyhedral Path Abstraction</title><link>https://s-cube-xmu.github.io/publication/pangolin-2020/</link><pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/pangolin-2020/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Exploring and Exploiting the Correlations between Bug-Inducing and Bug-Fixing Commits</title><link>https://s-cube-xmu.github.io/publication/exploring-and-exploiting-2019/</link><pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/exploring-and-exploiting-2019/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Could I Have a Stack Trace to Examine the Dependency Conflict Issue?</title><link>https://s-cube-xmu.github.io/publication/could-i-have-2019/</link><pubDate>Sat, 25 May 2019 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/could-i-have-2019/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Exposing Library API Misuses Via Mutation Analysis</title><link>https://s-cube-xmu.github.io/publication/exposing-library-2019/</link><pubDate>Sat, 25 May 2019 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/exposing-library-2019/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>SMOKE: Scalable Path-Sensitive Memory Leak Detection for Millions of Lines of Code</title><link>https://s-cube-xmu.github.io/publication/smoke-2019/</link><pubDate>Sat, 25 May 2019 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/smoke-2019/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Do the Dependency Conflicts in My Project Matter?</title><link>https://s-cube-xmu.github.io/publication/do-the-dep-2018/</link><pubDate>Sun, 04 Nov 2018 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/do-the-dep-2018/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>How Well Do Change Sequences Predict Defects? Sequence Learning from Software Changes</title><link>https://s-cube-xmu.github.io/publication/how-well-do-change-sequences-predict-defects-sequence-learning-from-software-changes-2020/</link><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/how-well-do-change-sequences-predict-defects-sequence-learning-from-software-changes-2020/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Pinpoint: Fast and Precise Sparse Value Flow Analysis for Million Lines of Code</title><link>https://s-cube-xmu.github.io/publication/pinpoint-2018/</link><pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/pinpoint-2018/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>ChangeLocator: Locate Crash-Inducing Changes Based on Crash Reports</title><link>https://s-cube-xmu.github.io/publication/changelocator-2018/</link><pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/changelocator-2018/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Context-Aware Patch Generation for Better Automated Program Repair</title><link>https://s-cube-xmu.github.io/publication/context-aware-patch-2018/</link><pubDate>Sun, 27 May 2018 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/context-aware-patch-2018/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Locus: locating bugs from software changes</title><link>https://s-cube-xmu.github.io/publication/locus-2016/</link><pubDate>Sat, 03 Sep 2016 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/locus-2016/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Casper: an efficient approach to call trace collection</title><link>https://s-cube-xmu.github.io/publication/casper-2016/</link><pubDate>Mon, 11 Jan 2016 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/casper-2016/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Diagnose Crashing Faults on Production Software</title><link>https://s-cube-xmu.github.io/publication/diagnose-2014/</link><pubDate>Tue, 11 Nov 2014 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/diagnose-2014/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>CrashLocator: locating crashing faults based on crash stacks</title><link>https://s-cube-xmu.github.io/publication/crashlocator-2014/</link><pubDate>Mon, 21 Jul 2014 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/crashlocator-2014/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>ReBucket: A method for clustering duplicate crash reports based on call stack similarity</title><link>https://s-cube-xmu.github.io/publication/rebucket-2012/</link><pubDate>Sat, 02 Jun 2012 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/rebucket-2012/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Sample-based software defect prediction with active and semi-supervised learning</title><link>https://s-cube-xmu.github.io/publication/sample-based-software-defect-prediction-with-active-and-semi-supervised-learning-2012/</link><pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/sample-based-software-defect-prediction-with-active-and-semi-supervised-learning-2012/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>ReLink: recovering links between bugs and changes</title><link>https://s-cube-xmu.github.io/publication/relink-2011/</link><pubDate>Fri, 09 Sep 2011 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/relink-2011/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Dealing with noise in defect prediction</title><link>https://s-cube-xmu.github.io/publication/dealing-2011/</link><pubDate>Sat, 21 May 2011 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/dealing-2011/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title>Sampling program quality</title><link>https://s-cube-xmu.github.io/publication/sampling-program-quality-2010/</link><pubDate>Sun, 12 Sep 2010 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/publication/sampling-program-quality-2010/</guid><description>&lt;!--
-&lt;div class="alert alert-note">
-&lt;div>
-Click the &lt;em>Cite&lt;/em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-&lt;/div>
-&lt;/div>
-Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --></description></item><item><title/><link>https://s-cube-xmu.github.io/admin/config.yml</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://s-cube-xmu.github.io/admin/config.yml</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>System and Software Security Group</title>
+    <link>https://s-cube-xmu.github.io/</link>
+      <atom:link href="https://s-cube-xmu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <description>System and Software Security Group</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://s-cube-xmu.github.io/media/icon_hu1368e4ffa06e7513186f849074288e92_89265_512x512_fill_lanczos_center_3.png</url>
+      <title>System and Software Security Group</title>
+      <link>https://s-cube-xmu.github.io/</link>
+    </image>
+    
+    <item>
+      <title>Example Event</title>
+      <link>https://s-cube-xmu.github.io/event/example/</link>
+      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/event/example/</guid>
+      <description>&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Wowchemy&amp;rsquo;s &lt;a href=&#34;https://wowchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Further event details, including page elements such as image galleries, can be added to the body of this page.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LibAlchemy: A Two-Layer Persistent Summary Design for Taming Third-Party Libraries in Static Bug-Finding Systems</title>
+      <link>https://s-cube-xmu.github.io/publication/libalchemy/</link>
+      <pubDate>Sun, 14 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/libalchemy/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Our third-party library related bug detection work has been accepted by ICSE 2024</title>
+      <link>https://s-cube-xmu.github.io/post/libalchemy_icse24/</link>
+      <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/post/libalchemy_icse24/</guid>
+      <description>&lt;p&gt;Our database logical bugs detection work has been accepted by ICSE 2024.&lt;/p&gt;
+&lt;ul class=&#34;cta-group&#34;&gt;
+  &lt;li&gt;
+    &lt;a href=&#34;https://s-cube-xmu.github.io/publication/&#34;  class=&#34;btn btn-primary px-3 py-3&#34;&gt;Details of publications →&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://s-cube-xmu.github.io/contact/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/contact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pinolo: Detecting Logical Bugs in Database Management Systems with Approximate Query Synthesis</title>
+      <link>https://s-cube-xmu.github.io/publication/pinolo/</link>
+      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/pinolo/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Our database logical bugs detection work has been accepted by ATC 2023</title>
+      <link>https://s-cube-xmu.github.io/post/atc2023/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/post/atc2023/</guid>
+      <description>&lt;p&gt;Our database logical bugs detection work has been accepted by &lt;a href=&#34;https://www.usenix.org/conference/atc23/presentation/hao&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ATC 2023&lt;/a&gt;.&lt;/p&gt;
+&lt;ul class=&#34;cta-group&#34;&gt;
+  &lt;li&gt;
+    &lt;a href=&#34;https://s-cube-xmu.github.io/publication/&#34;  class=&#34;btn btn-primary px-3 py-3&#34;&gt;Details of publications →&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Detecting JVM JIT Compiler Bugs via Exploring Two-Dimensional Input Spaces</title>
+      <link>https://s-cube-xmu.github.io/publication/detecting-jvm-jit-compiler-bugs-2023/</link>
+      <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/detecting-jvm-jit-compiler-bugs-2023/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Improving Java Deserialization Gadget Chain Mining via Overriding-Guided Object Generation</title>
+      <link>https://s-cube-xmu.github.io/publication/improving-java-deserialization-gadget-chain-mining-2023/</link>
+      <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/improving-java-deserialization-gadget-chain-mining-2023/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Our accelerating build script error detection work has been accepted by ASE 2022</title>
+      <link>https://s-cube-xmu.github.io/post/virtualbuild2022/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/post/virtualbuild2022/</guid>
+      <description>&lt;p&gt;Our accelerating build script error detection work has been accepted by &lt;a href=&#34;https://dl.acm.org/doi/10.1145/3551349.3556930&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ASE 2022&lt;/a&gt;.&lt;/p&gt;
+&lt;ul class=&#34;cta-group&#34;&gt;
+  &lt;li&gt;
+    &lt;a href=&#34;https://s-cube-xmu.github.io/publication/&#34;  class=&#34;btn btn-primary px-3 py-3&#34;&gt;Details of publications →&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Our python ecosystem management work has been accepted by ASE 2022</title>
+      <link>https://s-cube-xmu.github.io/post/smartpip2022/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/post/smartpip2022/</guid>
+      <description>&lt;p&gt;Our database logical bugs detection work has been accepted by &lt;a href=&#34;https://dl.acm.org/doi/10.1145/3551349.3560437&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ASE 2022&lt;/a&gt;.&lt;/p&gt;
+&lt;ul class=&#34;cta-group&#34;&gt;
+  &lt;li&gt;
+    &lt;a href=&#34;https://s-cube-xmu.github.io/publication/&#34;  class=&#34;btn btn-primary px-3 py-3&#34;&gt;Details of publications →&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>People</title>
+      <link>https://s-cube-xmu.github.io/people/</link>
+      <pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/people/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tour</title>
+      <link>https://s-cube-xmu.github.io/tour/</link>
+      <pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/tour/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Accelerating Build Dependency Error Detection via Virtual Build</title>
+      <link>https://s-cube-xmu.github.io/publication/virtualbuild/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/virtualbuild/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>smartPip: A Smart Approach to Resolving Python Dependency Conflict Issues</title>
+      <link>https://s-cube-xmu.github.io/publication/smartpip/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/smartpip/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Will Dependency Conflicts Affect My Program&#39;s Semantics?</title>
+      <link>https://s-cube-xmu.github.io/publication/will-dependency-conflicts-affect-my-programs-semantics-2021/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/will-dependency-conflicts-affect-my-programs-semantics-2021/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MVD: memory-related vulnerability detection based on flow-sensitive graph neural networks</title>
+      <link>https://s-cube-xmu.github.io/publication/mvd-2022/</link>
+      <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/mvd-2022/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>BEACON: Directed Grey-Box Fuzzing with Provable Path Pruning</title>
+      <link>https://s-cube-xmu.github.io/publication/beacon-2022/</link>
+      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/beacon-2022/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Targeting Requirements Violations of Autonomous Driving Systems by Dynamic Evolutionary Search</title>
+      <link>https://s-cube-xmu.github.io/publication/targetingrequirementsviolations-2021/</link>
+      <pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/targetingrequirementsviolations-2021/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Transcode: Detecting Status Code Mapping Errors in Large-Scale Systems</title>
+      <link>https://s-cube-xmu.github.io/publication/transcode-2021/</link>
+      <pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/transcode-2021/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Historical Spectrum based Fault Localization</title>
+      <link>https://s-cube-xmu.github.io/publication/historical-spectrum-based-fault-localization-2021/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/historical-spectrum-based-fault-localization-2021/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Skeletal Approximation Enumeration for SMT Solver Testing</title>
+      <link>https://s-cube-xmu.github.io/publication/sae-2021/</link>
+      <pubDate>Sat, 18 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/sae-2021/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fuzzing SMT Solvers via Two-Dimensional Input Space Exploration</title>
+      <link>https://s-cube-xmu.github.io/publication/fuzzingsmtsolver-2021/</link>
+      <pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/fuzzingsmtsolver-2021/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Path-Sensitive Sparse Analysis without Path Conditions</title>
+      <link>https://s-cube-xmu.github.io/publication/pathsensitivesparseanalyse-2021/</link>
+      <pubDate>Fri, 18 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/pathsensitivesparseanalyse-2021/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Automatic Detection and Update Suggestion for Outdated API Names in Documentation</title>
+      <link>https://s-cube-xmu.github.io/publication/automatic-detection-and-update-suggestion-for-outdated-api-names-in-documentation-2019/</link>
+      <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/automatic-detection-and-update-suggestion-for-outdated-api-names-in-documentation-2019/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Watchman: Monitoring Dependency Conflicts for Python Library Ecosystem</title>
+      <link>https://s-cube-xmu.github.io/publication/watchman/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/watchman/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Escaping Dependency Hell: Finding Build Dependency Errors with the Unified Dependency Graph</title>
+      <link>https://s-cube-xmu.github.io/publication/escapingdependencyhell-2020/</link>
+      <pubDate>Sat, 18 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/escapingdependencyhell-2020/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Conquering the Extensional Scalability Problem for Value-Flow Analysis Frameworks</title>
+      <link>https://s-cube-xmu.github.io/publication/conquering-2020/</link>
+      <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/conquering-2020/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Pangolin: Incremental Hybrid Fuzzing with Polyhedral Path Abstraction</title>
+      <link>https://s-cube-xmu.github.io/publication/pangolin-2020/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/pangolin-2020/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring and Exploiting the Correlations between Bug-Inducing and Bug-Fixing Commits</title>
+      <link>https://s-cube-xmu.github.io/publication/exploring-and-exploiting-2019/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/exploring-and-exploiting-2019/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Could I Have a Stack Trace to Examine the Dependency Conflict Issue?</title>
+      <link>https://s-cube-xmu.github.io/publication/could-i-have-2019/</link>
+      <pubDate>Sat, 25 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/could-i-have-2019/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exposing Library API Misuses Via Mutation Analysis</title>
+      <link>https://s-cube-xmu.github.io/publication/exposing-library-2019/</link>
+      <pubDate>Sat, 25 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/exposing-library-2019/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SMOKE: Scalable Path-Sensitive Memory Leak Detection for Millions of Lines of Code</title>
+      <link>https://s-cube-xmu.github.io/publication/smoke-2019/</link>
+      <pubDate>Sat, 25 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/smoke-2019/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Do the Dependency Conflicts in My Project Matter?</title>
+      <link>https://s-cube-xmu.github.io/publication/do-the-dep-2018/</link>
+      <pubDate>Sun, 04 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/do-the-dep-2018/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How Well Do Change Sequences Predict Defects? Sequence Learning from Software Changes</title>
+      <link>https://s-cube-xmu.github.io/publication/how-well-do-change-sequences-predict-defects-sequence-learning-from-software-changes-2020/</link>
+      <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/how-well-do-change-sequences-predict-defects-sequence-learning-from-software-changes-2020/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Pinpoint: Fast and Precise Sparse Value Flow Analysis for Million Lines of Code</title>
+      <link>https://s-cube-xmu.github.io/publication/pinpoint-2018/</link>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/pinpoint-2018/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ChangeLocator: Locate Crash-Inducing Changes Based on Crash Reports</title>
+      <link>https://s-cube-xmu.github.io/publication/changelocator-2018/</link>
+      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/changelocator-2018/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Context-Aware Patch Generation for Better Automated Program Repair</title>
+      <link>https://s-cube-xmu.github.io/publication/context-aware-patch-2018/</link>
+      <pubDate>Sun, 27 May 2018 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/context-aware-patch-2018/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Locus: locating bugs from software changes</title>
+      <link>https://s-cube-xmu.github.io/publication/locus-2016/</link>
+      <pubDate>Sat, 03 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/locus-2016/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Casper: an efficient approach to call trace collection</title>
+      <link>https://s-cube-xmu.github.io/publication/casper-2016/</link>
+      <pubDate>Mon, 11 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/casper-2016/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Diagnose Crashing Faults on Production Software</title>
+      <link>https://s-cube-xmu.github.io/publication/diagnose-2014/</link>
+      <pubDate>Tue, 11 Nov 2014 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/diagnose-2014/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CrashLocator: locating crashing faults based on crash stacks</title>
+      <link>https://s-cube-xmu.github.io/publication/crashlocator-2014/</link>
+      <pubDate>Mon, 21 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/crashlocator-2014/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ReBucket: A method for clustering duplicate crash reports based on call stack similarity</title>
+      <link>https://s-cube-xmu.github.io/publication/rebucket-2012/</link>
+      <pubDate>Sat, 02 Jun 2012 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/rebucket-2012/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sample-based software defect prediction with active and semi-supervised learning</title>
+      <link>https://s-cube-xmu.github.io/publication/sample-based-software-defect-prediction-with-active-and-semi-supervised-learning-2012/</link>
+      <pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/sample-based-software-defect-prediction-with-active-and-semi-supervised-learning-2012/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ReLink: recovering links between bugs and changes</title>
+      <link>https://s-cube-xmu.github.io/publication/relink-2011/</link>
+      <pubDate>Fri, 09 Sep 2011 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/relink-2011/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Dealing with noise in defect prediction</title>
+      <link>https://s-cube-xmu.github.io/publication/dealing-2011/</link>
+      <pubDate>Sat, 21 May 2011 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/dealing-2011/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sampling program quality</title>
+      <link>https://s-cube-xmu.github.io/publication/sampling-program-quality-2010/</link>
+      <pubDate>Sun, 12 Sep 2010 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/sampling-program-quality-2010/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://s-cube-xmu.github.io/admin/config.yml</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/admin/config.yml</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
