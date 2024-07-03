@@ -5,12 +5,25 @@
     <link>https://s-cube-xmu.github.io/post/</link>
       <atom:link href="https://s-cube-xmu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Latest News</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 10 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 03 Jul 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://s-cube-xmu.github.io/media/icon_hu42296bcecc293e1bd5ea2d7a0deb930c_280316_512x512_fill_lanczos_center_3.png</url>
       <title>Latest News</title>
       <link>https://s-cube-xmu.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Our database sql query simplification work has been accepted by [ISSTA 2024]</title>
+      <link>https://s-cube-xmu.github.io/post/issta2024/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/post/issta2024/</guid>
+      <description>&lt;p&gt;Our database sql query simplification work has been accepted by [ISSTA 2024]&lt;/p&gt;
+&lt;ul class=&#34;cta-group&#34;&gt;
+  &lt;li&gt;
+    &lt;a href=&#34;https://s-cube-xmu.github.io/publication/&#34;  class=&#34;btn btn-primary px-3 py-3&#34;&gt;Details of publications →&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>Our third-party library related bug detection work has been accepted by ICSE 2024</title>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Program Trimming | 系统与软件安全实验室</title>
+    <link>https://s-cube-xmu.github.io/zh/tag/program-trimming/</link>
+      <atom:link href="https://s-cube-xmu.github.io/zh/tag/program-trimming/index.xml" rel="self" type="application/rss+xml" />
+    <description>Program Trimming</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><lastBuildDate>Wed, 03 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://s-cube-xmu.github.io/media/icon_hu42296bcecc293e1bd5ea2d7a0deb930c_280316_512x512_fill_lanczos_center_3.png</url>
+      <title>Program Trimming</title>
+      <link>https://s-cube-xmu.github.io/zh/tag/program-trimming/</link>
+    </image>
+    
+    <item>
+      <title>SQLess: Dialect-Agnostic SQL Query Simplification</title>
+      <link>https://s-cube-xmu.github.io/zh/publication/sqless-2024/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/zh/publication/sqless-2024/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -28,6 +28,38 @@
     </item>
     
     <item>
+      <title>Our database sql query simplification work has been accepted by [ISSTA 2024]</title>
+      <link>https://s-cube-xmu.github.io/zh/post/issta2024/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/zh/post/issta2024/</guid>
+      <description>&lt;p&gt;Our database sql query simplification work has been accepted by [ISSTA 2024]&lt;/p&gt;
+&lt;ul class=&#34;cta-group&#34;&gt;
+  &lt;li&gt;
+    &lt;a href=&#34;https://s-cube-xmu.github.io/publication/&#34;  class=&#34;btn btn-primary px-3 py-3&#34;&gt;Details of publications →&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>SQLess: Dialect-Agnostic SQL Query Simplification</title>
+      <link>https://s-cube-xmu.github.io/zh/publication/sqless-2024/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/zh/publication/sqless-2024/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
       <title>LibAlchemy: A Two-Layer Persistent Summary Design for Taming Third-Party Libraries in Static Bug-Finding Systems</title>
       <link>https://s-cube-xmu.github.io/zh/publication/libalchemy/</link>
       <pubDate>Sun, 14 Apr 2024 00:00:00 +0000</pubDate>

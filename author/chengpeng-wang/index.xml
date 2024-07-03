@@ -5,12 +5,31 @@
     <link>https://s-cube-xmu.github.io/author/chengpeng-wang/</link>
       <atom:link href="https://s-cube-xmu.github.io/author/chengpeng-wang/index.xml" rel="self" type="application/rss+xml" />
     <description>Chengpeng Wang</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 14 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 03 Jul 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://s-cube-xmu.github.io/media/icon_hu42296bcecc293e1bd5ea2d7a0deb930c_280316_512x512_fill_lanczos_center_3.png</url>
       <title>Chengpeng Wang</title>
       <link>https://s-cube-xmu.github.io/author/chengpeng-wang/</link>
     </image>
+    
+    <item>
+      <title>SQLess: Dialect-Agnostic SQL Query Simplification</title>
+      <link>https://s-cube-xmu.github.io/publication/sqless-2024/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://s-cube-xmu.github.io/publication/sqless-2024/</guid>
+      <description>&lt;!-- 
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://wowchemy.com/docs/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
     
     <item>
       <title>LibAlchemy: A Two-Layer Persistent Summary Design for Taming Third-Party Libraries in Static Bug-Finding Systems</title>

@@ -31,7 +31,7 @@
                 />
   </url><url>
     <loc>https://s-cube-xmu.github.io/publication-type/1/</loc>
-    <lastmod>2024-04-14T00:00:00+00:00</lastmod>
+    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
@@ -45,7 +45,7 @@
                 />
   </url><url>
     <loc>https://s-cube-xmu.github.io/authors/</loc>
-    <lastmod>2024-04-14T00:00:00+00:00</lastmod>
+    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
@@ -56,6 +56,216 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://s-cube-xmu.github.io/authors/"
+                />
+  </url><url>
+    <loc>https://s-cube-xmu.github.io/tag/bug-detection/</loc>
+    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://s-cube-xmu.github.io/zh/tag/bug-detection/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://s-cube-xmu.github.io/tag/bug-detection/"
+                />
+  </url><url>
+    <loc>https://s-cube-xmu.github.io/author/chengpeng-wang/</loc>
+    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://s-cube-xmu.github.io/zh/author/chengpeng-wang/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://s-cube-xmu.github.io/author/chengpeng-wang/"
+                />
+  </url><url>
+    <loc>https://s-cube-xmu.github.io/author/gang-fan/</loc>
+    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://s-cube-xmu.github.io/zh/author/gang-fan/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://s-cube-xmu.github.io/author/gang-fan/"
+                />
+  </url><url>
+    <loc>https://s-cube-xmu.github.io/post/</loc>
+    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://s-cube-xmu.github.io/zh/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://s-cube-xmu.github.io/post/"
+                />
+  </url><url>
+    <loc>https://s-cube-xmu.github.io/author/li-lin/</loc>
+    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://s-cube-xmu.github.io/zh/author/li-lin/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://s-cube-xmu.github.io/author/li-lin/"
+                />
+  </url><url>
+    <loc>https://s-cube-xmu.github.io/post/issta2024/</loc>
+    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://s-cube-xmu.github.io/zh/post/issta2024/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://s-cube-xmu.github.io/post/issta2024/"
+                />
+  </url><url>
+    <loc>https://s-cube-xmu.github.io/tag/program-trimming/</loc>
+    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://s-cube-xmu.github.io/zh/tag/program-trimming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://s-cube-xmu.github.io/tag/program-trimming/"
+                />
+  </url><url>
+    <loc>https://s-cube-xmu.github.io/publication_types/</loc>
+    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://s-cube-xmu.github.io/zh/publication_types/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://s-cube-xmu.github.io/publication_types/"
+                />
+  </url><url>
+    <loc>https://s-cube-xmu.github.io/publication/</loc>
+    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://s-cube-xmu.github.io/zh/publication/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://s-cube-xmu.github.io/publication/"
+                />
+  </url><url>
+    <loc>https://s-cube-xmu.github.io/author/rongxin-wu/</loc>
+    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://s-cube-xmu.github.io/zh/author/rongxin-wu/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://s-cube-xmu.github.io/author/rongxin-wu/"
+                />
+  </url><url>
+    <loc>https://s-cube-xmu.github.io/tag/sql-query-simplification/</loc>
+    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://s-cube-xmu.github.io/zh/tag/sql-query-simplification/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://s-cube-xmu.github.io/tag/sql-query-simplification/"
+                />
+  </url><url>
+    <loc>https://s-cube-xmu.github.io/publication/sqless-2024/</loc>
+    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://s-cube-xmu.github.io/zh/publication/sqless-2024/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://s-cube-xmu.github.io/publication/sqless-2024/"
+                />
+  </url><url>
+    <loc>https://s-cube-xmu.github.io/tags/</loc>
+    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://s-cube-xmu.github.io/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://s-cube-xmu.github.io/tags/"
+                />
+  </url><url>
+    <loc>https://s-cube-xmu.github.io/author/zhuangda-wang/</loc>
+    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://s-cube-xmu.github.io/zh/author/zhuangda-wang/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://s-cube-xmu.github.io/author/zhuangda-wang/"
+                />
+  </url><url>
+    <loc>https://s-cube-xmu.github.io/author/zongyin-hao/</loc>
+    <lastmod>2024-07-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://s-cube-xmu.github.io/zh/author/zongyin-hao/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://s-cube-xmu.github.io/author/zongyin-hao/"
                 />
   </url><url>
     <loc>https://s-cube-xmu.github.io/author/charles-zhang/</loc>
@@ -70,20 +280,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://s-cube-xmu.github.io/author/charles-zhang/"
-                />
-  </url><url>
-    <loc>https://s-cube-xmu.github.io/author/chengpeng-wang/</loc>
-    <lastmod>2024-04-14T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://s-cube-xmu.github.io/zh/author/chengpeng-wang/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://s-cube-xmu.github.io/author/chengpeng-wang/"
                 />
   </url><url>
     <loc>https://s-cube-xmu.github.io/author/jiafeng-huang/</loc>
@@ -128,34 +324,6 @@
                 href="https://s-cube-xmu.github.io/tag/program-summary/"
                 />
   </url><url>
-    <loc>https://s-cube-xmu.github.io/publication_types/</loc>
-    <lastmod>2024-04-14T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://s-cube-xmu.github.io/zh/publication_types/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://s-cube-xmu.github.io/publication_types/"
-                />
-  </url><url>
-    <loc>https://s-cube-xmu.github.io/publication/</loc>
-    <lastmod>2024-04-14T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://s-cube-xmu.github.io/zh/publication/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://s-cube-xmu.github.io/publication/"
-                />
-  </url><url>
     <loc>https://s-cube-xmu.github.io/author/qingkai-shi/</loc>
     <lastmod>2024-04-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -170,20 +338,6 @@
                 href="https://s-cube-xmu.github.io/author/qingkai-shi/"
                 />
   </url><url>
-    <loc>https://s-cube-xmu.github.io/author/rongxin-wu/</loc>
-    <lastmod>2024-04-14T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://s-cube-xmu.github.io/zh/author/rongxin-wu/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://s-cube-xmu.github.io/author/rongxin-wu/"
-                />
-  </url><url>
     <loc>https://s-cube-xmu.github.io/tag/static-bug-finding/</loc>
     <lastmod>2024-04-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -196,20 +350,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://s-cube-xmu.github.io/tag/static-bug-finding/"
-                />
-  </url><url>
-    <loc>https://s-cube-xmu.github.io/tags/</loc>
-    <lastmod>2024-04-14T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://s-cube-xmu.github.io/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://s-cube-xmu.github.io/tags/"
                 />
   </url><url>
     <loc>https://s-cube-xmu.github.io/tag/third-party-library/</loc>
@@ -266,20 +406,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://s-cube-xmu.github.io/author/yuxuan-he/"
-                />
-  </url><url>
-    <loc>https://s-cube-xmu.github.io/post/</loc>
-    <lastmod>2023-10-10T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://s-cube-xmu.github.io/zh/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://s-cube-xmu.github.io/post/"
                 />
   </url><url>
     <loc>https://s-cube-xmu.github.io/post/libalchemy_icse24/</loc>
@@ -392,20 +518,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://s-cube-xmu.github.io/author/yushan-zhang/"
-                />
-  </url><url>
-    <loc>https://s-cube-xmu.github.io/author/zongyin-hao/</loc>
-    <lastmod>2023-07-10T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://s-cube-xmu.github.io/zh/author/zongyin-hao/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://s-cube-xmu.github.io/author/zongyin-hao/"
                 />
   </url><url>
     <loc>https://s-cube-xmu.github.io/post/atc2023/</loc>
@@ -938,20 +1050,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://s-cube-xmu.github.io/tag/dependency-resolving/"
-                />
-  </url><url>
-    <loc>https://s-cube-xmu.github.io/author/gang-fan/</loc>
-    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://s-cube-xmu.github.io/zh/author/gang-fan/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://s-cube-xmu.github.io/author/gang-fan/"
                 />
   </url><url>
     <loc>https://s-cube-xmu.github.io/author/guoqing-li/</loc>
@@ -3498,9 +3596,6 @@
     <loc>https://s-cube-xmu.github.io/author/jiaxin-hu/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://s-cube-xmu.github.io/author/li-lin/</loc>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://s-cube-xmu.github.io/author/pengyu-qi/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -3514,9 +3609,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://s-cube-xmu.github.io/author/zhiling-huang/</loc>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://s-cube-xmu.github.io/author/zhuangda-wang/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://s-cube-xmu.github.io/author/zige-tian/</loc>
